@@ -17,7 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0",
-    "svelte-watch-resize": "^1.0.3"
+    "marked": "^1.2.7",
+    "sirv-cli": "^1.0.0"
   }
 }

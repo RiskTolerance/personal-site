@@ -24,7 +24,7 @@
 	};
 
 	let handleSubNavigation = (event) => {
-		subPage = event.explicitOriginalTarget.innerHTML
+		subPage = event.explicitOriginalTarget.innerHTML;
 		//console.log(subPage);
 	};
 

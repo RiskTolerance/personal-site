@@ -1,30 +1,15 @@
 <script>
+    import WorkBlock from "../WorkBlock.svelte";
     export let subPage;
-    let graphicProjects = [
-        { id: "0", name: "testname1", image: "null" },
-        { id: "1", name: "testname2", image: "null" },
-        { id: "2", name: "testname3", image: "null" },
-        { id: "3", name: "testname4", image: "null" },
-        { id: "4", name: "testname5", image: "null" },
-        { id: "5", name: "testname6", image: "null" },
-    ];
-    let webDevProjects = [
-        { id: "0", name: "testname1", image: "null" },
-        { id: "1", name: "testname2", image: "null" },
-        { id: "2", name: "testname3", image: "null" },
-        { id: "3", name: "testname4", image: "null" },
-        { id: "4", name: "testname5", image: "null" },
-        { id: "5", name: "testname6", image: "null" },
-    ];
-    let photographyProjects = [
-        { id: "0", name: "testname1", image: "null" },
-        { id: "1", name: "testname2", image: "null" },
-        { id: "2", name: "testname3", image: "null" },
-        { id: "3", name: "testname4", image: "null" },
-        { id: "4", name: "testname5", image: "null" },
-        { id: "5", name: "testname6", image: "null" },
-    ];
-    console.log(subPage);
+    import { graphicDesignProjects } from "../../data/GraphicDesignWork.js";
+    import { webDevProjects } from "../../data/WebDevWork.js";
+    import { photographyProjects } from "../../data/PhotographyWork.js";
+
+    // import marked from "marked";
+    // import { onMount } from "svelte";
+    // onMount(async () => {
+    //     document.getElementById('description').innerHTML = marked('# Marked in the browser\n\nRendered by **marked**.');
+    // });
 </script>
 
 <style>
@@ -40,13 +25,6 @@
         width: 100%;
         height: 100%;
         flex-wrap: wrap;
-    }
-
-    .work-block {
-        width: 300px;
-        height: 300px;
-        margin: 3%;
-        background-color: orange;
     }
 
     #section-description {
@@ -67,7 +45,7 @@
 {#if subPage === 'Graphic Design'}
     <div id="section-description">
         <h1>Graphic Design Work</h1>
-        <p>
+        <p id="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
             libero accusamus ea quidem sunt eum facere saepe? Dolorem nam fugit,
             libero neque omnis voluptas optio quaerat nisi deleniti! Provident,
@@ -98,22 +76,16 @@
 
 <div id="work-block-wrapper">
     {#if subPage === 'Graphic Design'}
-        {#each graphicProjects as project, i}
-            <div class="work-block">
-                <p>{project.id}</p>
-            </div>
+        {#each graphicDesignProjects as project, i}
+            <WorkBlock {project} />
         {/each}
     {:else if subPage === 'Web Development'}
         {#each webDevProjects as project, i}
-            <div class="work-block">
-                <p>{project.id}</p>
-            </div>
+            <WorkBlock {project} />
         {/each}
     {:else if subPage === 'Photography'}
         {#each photographyProjects as project, i}
-            <div class="work-block">
-                <p>{project.id}</p>
-            </div>
+            <WorkBlock {project} />
         {/each}
     {/if}
 </div>
