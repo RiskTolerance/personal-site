@@ -4,7 +4,8 @@
     import { graphicDesignProjects } from "../../data/GraphicDesignWork.js";
     import { webDevProjects } from "../../data/WebDevWork.js";
     import { photographyProjects } from "../../data/PhotographyWork.js";
-
+    import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
     // import marked from "marked";
     // import { onMount } from "svelte";
     // onMount(async () => {
@@ -24,6 +25,7 @@
         justify-content: center;
         width: 100%;
         height: 100%;
+        margin-bottom: 10%;
         flex-wrap: wrap;
     }
 
@@ -42,8 +44,8 @@
     }
 </style>
 
-{#if subPage === 'Graphic Design'}
-    <div id="section-description">
+<div id="section-description">
+    {#if subPage === 'Graphic Design'}
         <h1>Graphic Design Work</h1>
         <p id="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
@@ -51,9 +53,7 @@
             libero neque omnis voluptas optio quaerat nisi deleniti! Provident,
             eos?
         </p>
-    </div>
-{:else if subPage === 'Web Development'}
-    <div id="section-description">
+    {:else if subPage === 'Web Development'}
         <h1>Web Dev Work</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
@@ -61,9 +61,7 @@
             libero neque omnis voluptas optio quaerat nisi deleniti! Provident,
             eos?
         </p>
-    </div>
-{:else if subPage === 'Photography'}
-    <div id="section-description">
+    {:else if subPage === 'Photography'}
         <h1>Photography Work</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
@@ -71,21 +69,21 @@
             libero neque omnis voluptas optio quaerat nisi deleniti! Provident,
             eos?
         </p>
-    </div>
-{/if}
+    {/if}
+</div>
 
 <div id="work-block-wrapper">
     {#if subPage === 'Graphic Design'}
         {#each graphicDesignProjects as project, i}
-            <WorkBlock {project} />
+            <WorkBlock on:workItemPress={() => dispatch('workItemPress')} {project} {i} />
         {/each}
     {:else if subPage === 'Web Development'}
         {#each webDevProjects as project, i}
-            <WorkBlock {project} />
+            <WorkBlock on:workItemPress={() => dispatch('workItemPress')} {project} {i} />
         {/each}
     {:else if subPage === 'Photography'}
         {#each photographyProjects as project, i}
-            <WorkBlock {project} />
+            <WorkBlock on:workItemPress={() => dispatch('workItemPress')} {project} {i} />
         {/each}
     {/if}
 </div>

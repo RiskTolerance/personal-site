@@ -4,10 +4,14 @@
     import WorkContent from "./pages/WorkContent.svelte";
     import BlogContent from "./pages/BlogContent.svelte";
     import ContactContent from "./pages/ContactContent.svelte";
+    import WorkPage from "./pages/WorkPage.svelte";
+    import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
 
     export let page;
     export let subPage;
     export let clipRatio;
+    export let currentFocusItem;
 </script>
 
 <style>
@@ -28,13 +32,17 @@
 </style>
 
 <div id="outer-content-wrapper">
-    <div style="margin-left: {clipRatio}%" id="inner-content-wrapper">
+    <div style="margin-left: {clipRatio + 3}%" id="inner-content-wrapper">
         {#if page === 'Welcome'}
             <WelcomeContent />
         {:else if page === 'About'}
             <AboutContent />
         {:else if page === 'Work'}
-            <WorkContent {subPage} />
+            {#if currentFocusItem === ''}
+            <WorkContent on:workItemPress={() => dispatch('workItemPress')} {subPage} />
+            {:else}
+            <WorkPage {currentFocusItem} />
+            {/if}
         {:else if page === 'Blog'}
             <BlogContent />
         {:else if page === 'Contact'}

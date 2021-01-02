@@ -1,4 +1,5 @@
 <script>
+	//components
 	import Navbar from "./components/Navbar.svelte";
 	import PageHeader from "./components/PageHeader.svelte";
 	import Background from "./components/Background.svelte";
@@ -6,9 +7,16 @@
 	import Footer from "./components/Footer.svelte";
 
 	// data
+	import { graphicDesignProjects } from "./data/GraphicDesignWork.js";
+	import { webDevProjects } from "./data/WebDevWork.js";
+	import { photographyProjects } from "./data/PhotographyWork.js";
+
+	//variables
 	let title = "Welcome!";
 	let page = "Welcome";
 	let subPage = "Graphic Design";
+	let currentFocusIndex = "";
+	let currentFocusItem = "";
 	let colors = { dark: "#272727", orange: "#E0A926", light: "#F4FFF4" };
 	let leftHeaderMargin = "25";
 	let clipRatio = 40;
@@ -22,16 +30,35 @@
 		page = event.explicitOriginalTarget.dataset.menuItem;
 		title = event.explicitOriginalTarget.innerHTML;
 	};
-
-	let handleSubNavigation = (event) => {
+	let handleWorkNavigation = (event) => {
 		subPage = event.explicitOriginalTarget.innerHTML;
-		//console.log(subPage);
 	};
 
+	let handleWorkItemNavigation = (event) => {
+		currentFocusIndex =
+			event.explicitOriginalTarget.firstChild.dataset.item;
+		if (subPage === "Graphic Design") {
+			currentFocusItem = graphicDesignProjects[currentFocusIndex];
+		} else if (subPage === "Web Development") {
+			currentFocusItem = webDevProjects[currentFocusIndex];
+		} else if (subPage === "Photography") {
+			currentFocusItem = photographyProjects[currentFocusIndex];
+		} else if (subPage === "Blog") {
+			console.log("itsablog!");
+		}
+	};
+	let handleBlogNavigation = (event) => {
+		//console.log(event);
+	};
 	let handleMouseMove = (event) => {
 		m.x = event.clientX;
 		m.y = event.clientY;
 		console.log(y);
+	};
+
+	let closeWork = () => {
+		currentFocusIndex = "";
+		currentFocusItem = "";
 	};
 </script>
 
@@ -56,14 +83,13 @@
 
 <Navbar
 	on:navpress={handleNavigation}
-	on:subnavpress={handleSubNavigation}
+	on:workNavPress={handleWorkNavigation}
 	on:homepress={() => {
 		page = 'Welcome';
 		title = 'Welcome!';
 		clipRatio = 40;
 		leftHeaderMargin = '25';
 	}}
-	{colors}
 	{y} />
 
 <main on:mousemove={handleMouseMove}>
@@ -72,11 +98,18 @@
 		{title}
 		{leftHeaderMargin}
 		{page}
-		{colors}
 		{subPage}
-		on:subpress={handleSubNavigation} />
-	<Content {page} {subPage} {clipRatio} {colors} />
-	<Footer {colors} />
+		{currentFocusItem}
+		on:workNavPress={handleWorkNavigation}
+		on:closeWork={closeWork} />
+	<Content
+		on:workItemPress={handleWorkItemNavigation}
+		{page}
+		{subPage}
+		{currentFocusIndex}
+		{currentFocusItem}
+		{clipRatio} />
+	<Footer />
 </main>
 
 <!-- fonts -->

@@ -5,6 +5,7 @@
     export let leftHeaderMargin;
     export let page;
     export let subPage;
+    export let currentFocusItem;
     const dispatch = createEventDispatcher();
 </script>
 
@@ -42,5 +43,5 @@
     <div style={`margin-left: ${leftHeaderMargin}%;`} id="title-wrapper">
         <h1 id="title">{title}</h1>
     </div>
-    <Baseline on:subpress={() => dispatch('subpress')} {page} {subPage} />
+    <Baseline on:closeWork={() => dispatch('closeWork')} on:workNavPress={() => dispatch('workNavPress')} {page} {subPage} {currentFocusItem} />
 </div>

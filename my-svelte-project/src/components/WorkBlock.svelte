@@ -1,5 +1,8 @@
 <script>
     export let project;
+    export let i;
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
 </script>
 
 <style>
@@ -29,6 +32,9 @@
     }
 </style>
 
-<div style="background-image: url(/images/projects/{project.type}/{project.title}/header.jpg)" class="work-block">
-    <p>{project.title}</p>
+<div
+    on:click={() => dispatch('workItemPress')}
+    style="background-image: url(/images/projects/{project.type}/{project.titleUrl}/{project.headerImg})"
+    class="work-block">
+    <p data-item={i} data-link={project.titleUrl}>{project.title}</p>
 </div>

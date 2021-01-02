@@ -32,7 +32,7 @@
         z-index: -1;
         width: 130px;
         height: 400px;
-        filter: opacity(40%);
+        filter: opacity(60%);
     }
 </style>
 
