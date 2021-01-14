@@ -1,7 +1,6 @@
 <script>
     import Navlist from "./Navlist.svelte";
     import { createEventDispatcher } from "svelte";
-
     const dispatch = createEventDispatcher();
     export let y;
 </script>

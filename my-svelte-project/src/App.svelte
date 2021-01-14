@@ -1,4 +1,6 @@
 <script>
+	//node
+
 	//components
 	import Navbar from "./components/Navbar.svelte";
 	import PageHeader from "./components/PageHeader.svelte";
@@ -10,6 +12,7 @@
 	import { graphicDesignProjects } from "./data/GraphicDesignWork.js";
 	import { webDevProjects } from "./data/WebDevWork.js";
 	import { photographyProjects } from "./data/PhotographyWork.js";
+	import { posts } from "./data/BlogPosts.js";
 
 	//variables
 	let title = "Welcome!";
@@ -34,6 +37,14 @@
 		subPage = event.explicitOriginalTarget.innerHTML;
 	};
 
+	let handleBlogItemNavigation = (event) => {
+		console.log("clicked!");
+		console.log(event.explicitOriginalTarget.attributes[0].nodeValue);
+		currentFocusIndex =
+			event.explicitOriginalTarget.attributes[0].nodeValue;
+		currentFocusItem = posts[currentFocusIndex];
+	};
+
 	let handleWorkItemNavigation = (event) => {
 		currentFocusIndex =
 			event.explicitOriginalTarget.firstChild.dataset.item;
@@ -47,16 +58,14 @@
 			console.log("itsablog!");
 		}
 	};
-	let handleBlogNavigation = (event) => {
-		//console.log(event);
-	};
+
 	let handleMouseMove = (event) => {
 		m.x = event.clientX;
 		m.y = event.clientY;
 		console.log(y);
 	};
 
-	let closeWork = () => {
+	let closeItem = () => {
 		currentFocusIndex = "";
 		currentFocusItem = "";
 	};
@@ -83,6 +92,7 @@
 
 <Navbar
 	on:navpress={handleNavigation}
+	on:navpress={closeItem}
 	on:workNavPress={handleWorkNavigation}
 	on:homepress={() => {
 		page = 'Welcome';
@@ -98,15 +108,14 @@
 		{title}
 		{leftHeaderMargin}
 		{page}
-		{subPage}
 		{currentFocusItem}
 		on:workNavPress={handleWorkNavigation}
-		on:closeWork={closeWork} />
+		on:closeItem={closeItem} />
 	<Content
 		on:workItemPress={handleWorkItemNavigation}
+		on:blogItemPress={handleBlogItemNavigation}
 		{page}
 		{subPage}
-		{currentFocusIndex}
 		{currentFocusItem}
 		{clipRatio} />
 	<Footer />
@@ -115,6 +124,6 @@
 <!-- fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
-	href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+	href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
 	rel="stylesheet" />
 <link rel="stylesheet" href="https://use.typekit.net/bar8qrt.css" />

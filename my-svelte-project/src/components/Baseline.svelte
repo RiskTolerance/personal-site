@@ -1,15 +1,9 @@
 <script>
+    import Close from "../components/icons/Close.svelte"
     import { createEventDispatcher } from "svelte";
-
     const dispatch = createEventDispatcher();
     export let page;
-    export let subPage;
     export let currentFocusItem;
-
-    let title = "";
-    if (subPage) {
-        console.log(subPage);
-    }
 </script>
 
 <style>
@@ -29,6 +23,7 @@
         height: 10px;
         background-color: white;
         align-self: flex-end;
+        vertical-align: bottom;
     }
 
     #subtitle {
@@ -39,25 +34,15 @@
     }
 
     h3 {
-        margin: 0;
         text-align: center;
+        line-height: 17px;
         font-family: "Lato", sans-serif;
-        font-size: 1.5em;
+        font-size: 1.4rem;
         width: 40%;
     }
 
     h3:hover {
         color: #e0a43e;
-        cursor: pointer;
-    }
-
-    #closeBtn {
-        scale: 0.8;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    #closeBtn:hover {
         cursor: pointer;
     }
 </style>
@@ -79,24 +64,37 @@
         {:else}
             <div id="subtitle">
                 <div
-                    style="width: 50%; background-color: #e0a43e;"
+                    style="width: 30%; background-color: #e0a43e;"
                     class="baseline" />
-                <h3 style="color: #e0a43e; width: 30%; font-size: 3rem; font-family: essonnes-headline, serif;">
+                <h3
+                    style="color: #e0a43e; width: 40%; font-size: 2.5rem; font-family: essonnes-headline, serif; line-height: 33px;">
                     {currentFocusItem.title}
                 </h3>
                 <div
-                    style="width: 50%; background-color: #e0a43e;"
+                    style="width: 30%; background-color: #e0a43e;"
                     class="baseline" />
             </div>
 
-            <img
-                id="closeBtn"
-                on:click={() => dispatch('closeWork')}
-                src="./images/ex.svg"
-                alt="close section button" />
+            <Close on:closeItem={() => dispatch('closeItem')}/>
         {/if}
     {:else if page === 'Blog'}
-        <div style="width: 100%" class="baseline" />
+        {#if currentFocusItem === ''}
+            <div style="width: 100%" class="baseline" />
+        {:else}
+            <div id="subtitle">
+                <div
+                    style="width: 30%; background-color: #e0a43e;"
+                    class="baseline" />
+                <h3
+                    style="color: #e0a43e; width: 40%; font-size: 2.5rem; font-family: essonnes-headline, serif; line-height: 33px;">
+                    {currentFocusItem.title}
+                </h3>
+                <div
+                    style="width: 30%; background-color: #e0a43e;"
+                    class="baseline" />
+            </div>
+            <Close on:closeItem={() => dispatch('closeItem')}/>
+        {/if}
     {:else if page === 'Contact'}
         <div style="width: 100%" class="baseline" />
     {/if}

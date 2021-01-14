@@ -1,12 +1,8 @@
 <script>
-    let blogs = [
-        { id: "0", name: "testname1", image: "null" },
-        { id: "1", name: "testname2", image: "null" },
-        { id: "2", name: "testname3", image: "null" },
-        { id: "3", name: "testname4", image: "null" },
-        { id: "4", name: "testname5", image: "null" },
-        { id: "5", name: "testname6", image: "null" },
-    ];
+    import BlogBlock from "../BlogBlock.svelte";
+    import { posts } from "../../data/BlogPosts.js";
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
 </script>
 
 <style>
@@ -22,13 +18,6 @@
         width: 100%;
         height: 100%;
         flex-wrap: wrap;
-    }
-
-    .blog-block {
-        width: 40%;
-        height: 350px;
-        margin: 3%;
-        background-color: orange;
     }
 
     #section-description {
@@ -55,9 +44,10 @@
 </div>
 
 <div id="blog-block-wrapper">
-    {#each blogs as blog, i}
-        <div class="blog-block">
-            <p>{blog.id}</p>
-        </div>
+    {#each posts as post, i}
+        <BlogBlock
+            on:blogItemPress={() => dispatch('blogItemPress')}
+            {post}
+            {i} />
     {/each}
 </div>

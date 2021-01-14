@@ -6,11 +6,6 @@
     import { photographyProjects } from "../../data/PhotographyWork.js";
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
-    // import marked from "marked";
-    // import { onMount } from "svelte";
-    // onMount(async () => {
-    //     document.getElementById('description').innerHTML = marked('# Marked in the browser\n\nRendered by **marked**.');
-    // });
 </script>
 
 <style>

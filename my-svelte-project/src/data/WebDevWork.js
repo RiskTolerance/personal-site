@@ -15,10 +15,10 @@ export let webDevProjects = [
     tools: "Illustrator, Photoshop, HTML, CSS, JavaScript, Svelte", 
     images: ["1.jpg", "2.jpg", "3.jpg"]},
 
-    {type: "WebDev", 
+    {type: "WebDev",
     title: "Tiny Tree",
     titleUrl: "TinyTree",
-    headerImg: "header.jpg", 
+    headerImg: "header.jpg",
     description: "Tiny Tree is a bonsai tree company which gives users a high level of customization and exclusivity. Users can mix and match subcategories to create the product that best suits their needs. Subcategories include trees, seeds, planters, soils, and mosses.",
     tools: "Illustrator, Photoshop",
     images: ["1.jpg", "2.jpg", "3.jpg"]},
@@ -45,5 +45,13 @@ export let webDevProjects = [
     headerImg: "header.jpg", 
     description: "My final project at Ironhack (a web development camp in Miami, Florida), Card is a social media network which I decided upon based on a perceived community need. Two existing subreddits currently fill this need in an informal way*. This app seeks to create a more formal process for the combined 30k+ Reddit members to connect and network. *I Need A Team (r/inat) and Game Developer Classifieds (r/gameDevClassifieds)",
     tools: "HTML, CSS, Javascript, MERN, Illustrator", 
+    images: ["1.jpg", "2.jpg", "3.jpg"]},
+
+    {type: "WebDev",
+    titleUrl: "GOAT",
+    title: "GOAT",
+    headerImg: "header.jpg", 
+    description: "The first JavaScript project that I worked on at Ironhack.",
+    tools: "Javascript, Phaser", 
     images: ["1.jpg", "2.jpg", "3.jpg"]},
 ];

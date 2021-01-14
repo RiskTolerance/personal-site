@@ -5,9 +5,9 @@
     import BlogContent from "./pages/BlogContent.svelte";
     import ContactContent from "./pages/ContactContent.svelte";
     import WorkPage from "./pages/WorkPage.svelte";
+    import BlogPage from "./pages/BlogPage.svelte";
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
-
     export let page;
     export let subPage;
     export let clipRatio;
@@ -39,12 +39,16 @@
             <AboutContent />
         {:else if page === 'Work'}
             {#if currentFocusItem === ''}
-            <WorkContent on:workItemPress={() => dispatch('workItemPress')} {subPage} />
+                <WorkContent on:workItemPress={() => dispatch('workItemPress')} {subPage} />
             {:else}
-            <WorkPage {currentFocusItem} />
+                <WorkPage {currentFocusItem} />
             {/if}
         {:else if page === 'Blog'}
-            <BlogContent />
+            {#if currentFocusItem === ''}
+                <BlogContent on:blogItemPress={() => dispatch('blogItemPress')}/>
+            {:else}
+                <BlogPage {currentFocusItem} />
+            {/if}
         {:else if page === 'Contact'}
             <ContactContent />
         {/if}
