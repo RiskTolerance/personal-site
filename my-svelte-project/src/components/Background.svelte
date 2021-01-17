@@ -1,6 +1,30 @@
 <script>
+    import {writable} from 'svelte/store'
+import TweenedStore from './TweenedStore.svelte';
     export let clipRatio = 40;
-    export let colors;
+    let widthConstraint = window.innerWidth/(clipRatio*0.1);
+    let heightConstraint = window.innerHeight/2;
+
+    const generateDimention = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min);
+    };
+
+    const generatePosition = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min);
+    };
+
+    let dimentions = writable({width: generateDimention(100, 500),height: generateDimention(100, 700),left: generatePosition(10, widthConstraint),top: generatePosition(10, heightConstraint)})
+
+    const generateNewDimentions = () => {
+        dimentions.width = generateDimention(100, 500)
+        dimentions.height = generateDimention(100, 700)
+        dimentions.left = generatePosition(10, widthConstraint)
+        dimentions.top = generatePosition(10, heightConstraint);
+    };
+
+    setInterval(() => {
+        generateNewDimentions();
+    }, 7000);
 </script>
 
 <style>
@@ -25,20 +49,21 @@
         left: -50%;
     }
 
-    #color-box {
+    #color-box-container {
+        display: block;
         position: fixed;
-        top: -100px;
-        left: 240px;
-        z-index: -1;
-        width: 130px;
-        height: 400px;
-        filter: opacity(60%);
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
     }
 </style>
 
 <div id="wrapper">
     <div style="width:{clipRatio}%" id="img-wrapper">
         <img src="./images/backgrounds/1.jpg" alt="" />
+        <div id="color-box-container">
+            <TweenedStore {dimentions} />
+        </div>
     </div>
 </div>
-<div style="background-color: {colors.orange};" id="color-box"/>

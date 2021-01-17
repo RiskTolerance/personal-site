@@ -27,7 +27,9 @@
     }
 
     #portrait {
-        width: 30%;
+        display: block;
+        max-height: 450px;
+        margin-right: 60px;
     }
 
     p {
@@ -45,10 +47,7 @@
             src="/images/portrait.jpeg"
             alt="Portrait of Isaac Druin" />
         <p>
-            About me. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Laudantium, nobis? Nemo atque, quae dolores fugiat necessitatibus
-            eos dicta eius consequatur dolore quaerat non, dolorum facere
-            officia sint ipsam. Iusto, ducimus.
+            Hello! <br><br> My name is Isaac and I hail from the frozen wasteland of South Dakota. I'm a graphic designer interested in web development, tradtional media, 3D modeling, and photography. <br><br> My undergraduate degree is in graphic design with a minor in art history. In 2020 (before all the covid nonsense came into play) I spent three months at Ironhack, a web development bootcamp in Miami. 
         </p>
     </div>
 </div>

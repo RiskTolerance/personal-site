@@ -38,10 +38,8 @@
 	};
 
 	let handleBlogItemNavigation = (event) => {
-		console.log("clicked!");
-		console.log(event.explicitOriginalTarget.attributes[0].nodeValue);
 		currentFocusIndex =
-			event.explicitOriginalTarget.attributes[0].nodeValue;
+			event.explicitOriginalTarget.attributes[1].nodeValue;
 		currentFocusItem = posts[currentFocusIndex];
 	};
 
@@ -103,7 +101,7 @@
 	{y} />
 
 <main on:mousemove={handleMouseMove}>
-	<Background {clipRatio} {colors} />
+	<Background {clipRatio} />
 	<PageHeader
 		{title}
 		{leftHeaderMargin}
