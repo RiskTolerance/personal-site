@@ -14,18 +14,20 @@
 
     #blog-block-wrapper {
         display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
+        justify-content: flex-start;
+        margin-left: 5%;
+        margin-bottom: 40px;
+        width: 90%;
+        height: 90%;
         flex-wrap: wrap;
     }
 
     #section-description {
+        margin:40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 50%;
-        margin: 5% 10%;
+        width: 90%;
     }
 
     p {
@@ -35,15 +37,14 @@
     }
 </style>
 
-<div id="section-description">
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-        libero accusamus ea quidem sunt eum facere saepe? Dolorem nam fugit,
-        libero neque omnis voluptas optio quaerat nisi deleniti! Provident, eos?
-    </p>
-</div>
-
 <div id="blog-block-wrapper">
+    <div id="section-description">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            libero accusamus ea quidem sunt eum facere saepe? Dolorem nam fugit,
+            libero neque omnis voluptas optio quaerat nisi deleniti! Provident, eos?
+        </p>
+    </div>
     {#each posts as post, i}
         <BlogBlock
             on:blogItemPress={() => dispatch('blogItemPress')}

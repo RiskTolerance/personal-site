@@ -1,9 +1,9 @@
 <script>
+	import { dimentions } from '../data/ColoredBoxDimentions';
     import ColoredBox from "./ColoredBox.svelte";
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
-    export let dimentions;
-    
+
     const tweenHeight = tweened(dimentions.height, {
 		duration: 4000,
 		easing: cubicOut
@@ -20,6 +20,7 @@
 		duration: 4000,
 		easing: cubicOut
     });
+    
     setInterval(() => {
         tweenHeight.set(dimentions.height);
         tweenWidth.set(dimentions.width);
