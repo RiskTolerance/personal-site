@@ -1,8 +1,8 @@
 <script>
-    import { dimentions } from '../data/ColoredBoxDimentions';
+	import { dimentions } from '../data/ColoredBoxDimentions';
 	import TweenedStore from './TweenedStore.svelte';
-    export let clipRatio = 40;
-    
+	export let clipRatio = 40;
+
 	let widthConstraint = window.innerWidth / (clipRatio * 0.1);
 	let heightConstraint = window.innerHeight / 2;
 
@@ -19,10 +19,10 @@
 		dimentions.height = generateDimention(100, 700);
 		dimentions.left = generatePosition(10, widthConstraint);
 		dimentions.top = generatePosition(10, heightConstraint);
-    };
-    
-    generateNewDimentions();
-    
+	};
+
+	generateNewDimentions();
+
 	setInterval(() => {
 		generateNewDimentions();
 	}, 7000);

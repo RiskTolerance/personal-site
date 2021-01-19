@@ -12,13 +12,6 @@
 			max: 5,
 			speed: 400,
 			glare: true,
-			'max-glare': 0.1,
-		});
-		VanillaTilt.init(document.querySelectorAll('.image-frame'), {
-			reverse: true,
-			max: 5,
-			speed: 400,
-			glare: true,
 			'max-glare': 0.2,
 		});
 	});
@@ -57,7 +50,8 @@
 		width: 100%;
 		height: 100%;
 		bottom: 0px;
-		z-index: 10;
+		transform: translateZ(51px);
+		cursor: pointer;
 	}
 
 	.blog-block {
@@ -78,7 +72,7 @@
 		height: 120%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		transform: translateZ(-100px);
+		transform: translateZ(-120px);
 	}
 
 	.info-container-color {

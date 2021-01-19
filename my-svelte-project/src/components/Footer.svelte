@@ -1,12 +1,22 @@
 <script>
 	import GitHub from '../components/icons/GitHub.svelte';
 	import LinkedIn from '../components/icons/LinkedIn.svelte';
+	import SocialArrow from '../components/icons/SocialArrow.svelte';
+	import { fly } from 'svelte/transition';
+	export let page = '';
 </script>
 
 <div id="footer-wrapper">
 	<div id="content">
-		<GitHub />
-		<LinkedIn />
+		{#if page === 'Contact'}
+			<div id="social-arrow" transition:fly={{ y: -20, duration: 500 }}>
+				<SocialArrow />
+			</div>
+		{/if}
+		<div id="social-links">
+			<GitHub />
+			<LinkedIn />
+		</div>
 	</div>
 </div>
 
@@ -20,16 +30,29 @@
 
 	#footer-wrapper {
 		display: flex;
-        height: 10vh;
+		height: 10vh;
 		width: 100%;
 		justify-content: flex-end;
 	}
 
 	#content {
-        width: 200px;
+		width: 200px;
 		display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	#social-links {
+		width: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	#social-arrow {
+		position: relative;
+		left: -140px;
+		top: 0px;
 	}
 </style>

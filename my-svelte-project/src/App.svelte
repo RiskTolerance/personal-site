@@ -20,7 +20,7 @@
 	let subPage = "Graphic Design";
 	let currentFocusIndex = "";
 	let currentFocusItem = "";
-	let colors = { dark: "#272727", orange: "#E0A926", light: "#F4FFF4" };
+	// let colors = { dark: "#272727", orange: "#E0A926", light: "#F4FFF4" };
 	let leftHeaderMargin = "25";
 	let clipRatio = 40;
 	let m = { x: 0, y: 0 };
@@ -33,6 +33,7 @@
 		page = event.explicitOriginalTarget.dataset.menuItem;
 		title = event.explicitOriginalTarget.innerHTML;
 	};
+
 	let handleWorkNavigation = (event) => {
 		subPage = event.explicitOriginalTarget.innerHTML;
 	};
@@ -45,7 +46,7 @@
 
 	let handleWorkItemNavigation = (event) => {
 		currentFocusIndex =
-			event.explicitOriginalTarget.firstChild.dataset.item;
+			event.explicitOriginalTarget.attributes[1].nodeValue;
 		if (subPage === "Graphic Design") {
 			currentFocusItem = graphicDesignProjects[currentFocusIndex];
 		} else if (subPage === "Web Development") {
@@ -98,7 +99,7 @@
 		clipRatio = 40;
 		leftHeaderMargin = '25';
 	}}
-	{y} />
+	{y} {page} />
 
 <main on:mousemove={handleMouseMove}>
 	<Background {clipRatio} />
@@ -116,7 +117,7 @@
 		{subPage}
 		{currentFocusItem}
 		{clipRatio} />
-	<Footer />
+	<Footer {page} />
 </main>
 
 <!-- fonts -->

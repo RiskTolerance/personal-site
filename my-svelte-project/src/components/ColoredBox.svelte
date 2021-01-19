@@ -1,9 +1,9 @@
 <script>
-import { dimentions } from "../data/ColoredBoxDimentions";
-    export let tweenHeight;
+	import { dimentions } from '../data/ColoredBoxDimentions';
+	export let tweenHeight;
 	export let tweenWidth;
 	export let tweenLeft;
-    export let tweenTop;
+	export let tweenTop;
 </script>
 
 <div
