@@ -4,6 +4,27 @@
 	const dispatch = createEventDispatcher();
 	export let page;
 	export let currentFocusItem;
+	export let subPage;
+	let graphicDesignColor = '#F4FFF4';
+	let webDevelopmentColor = '#F4FFF4';
+	let photographyColor = '#F4FFF4';
+
+	let clearSelection = () => {
+		graphicDesignColor = '#F4FFF4';
+		webDevelopmentColor = '#F4FFF4';
+		photographyColor = '#F4FFF4';
+	};
+
+	$: if (subPage === 'Graphic Design') {
+		clearSelection();
+		graphicDesignColor = '#e0a43e';
+	} else if (subPage === 'Web Development') {
+		clearSelection();
+		webDevelopmentColor = '#e0a43e';
+	} else if (subPage === 'Photography') {
+		clearSelection();
+		photographyColor = '#e0a43e';
+	}
 </script>
 
 <div id="wrapper">
@@ -14,11 +35,28 @@
 	{:else if page === 'Work'}
 		{#if currentFocusItem === ''}
 			<div style="width: 40px" class="baseline" />
-			<h3 on:click={() => dispatch('workNavPress')}>Graphic Design</h3>
+			<h3
+				style="color: {graphicDesignColor}"
+				on:click={() => {
+					dispatch('workNavPress');
+				}}
+			>Graphic Design</h3>
 			<div style="width: 40px" class="baseline" />
-			<h3 on:click={() => dispatch('workNavPress')}>Web Development</h3>
+			<h3
+				style="color: {webDevelopmentColor}"
+				id="web-development"
+				on:click={() => {
+					dispatch('workNavPress');
+				}}
+			>Web Development</h3>
 			<div style="width: 40px" class="baseline" />
-			<h3 on:click={() => dispatch('workNavPress')}>Photography</h3>
+			<h3
+				style="color: {photographyColor}"
+				id="photography"
+				on:click={() => {
+					dispatch('workNavPress');
+				}}
+			>Photography</h3>
 			<div style="width: 50%;" class="baseline" />
 		{:else}
 			<div id="subtitle">
@@ -36,7 +74,6 @@
 					class="baseline"
 				/>
 			</div>
-
 			<Close on:closeItem={() => dispatch('closeItem')} />
 		{/if}
 	{:else if page === 'Blog'}
@@ -100,6 +137,7 @@
 		font-family: 'Lato', sans-serif;
 		font-size: 1.4rem;
 		min-width: 220px;
+		color: '#F4FFF4';
 	}
 
 	h3:hover {

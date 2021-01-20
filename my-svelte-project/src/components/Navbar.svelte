@@ -15,11 +15,14 @@
 				alt="logo"
 			/>
 		</div>
-		{#if y === 0}
+		<nav>
+			{#if y === 0}
 			<Navlist on:navpress={() => dispatch('navpress')} {page}/>
 		{:else}
 			<div />
 		{/if}
+		</nav>
+		
 	</div>
 </div>
 
@@ -29,6 +32,11 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+	}
+
+	nav {
+		width: 33%;
+		align-items: center;
 	}
 
 	#outer-wrapper {

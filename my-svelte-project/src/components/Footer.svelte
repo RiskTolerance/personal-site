@@ -2,14 +2,14 @@
 	import GitHub from '../components/icons/GitHub.svelte';
 	import LinkedIn from '../components/icons/LinkedIn.svelte';
 	import SocialArrow from '../components/icons/SocialArrow.svelte';
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	export let page = '';
 </script>
 
 <div id="footer-wrapper">
 	<div id="content">
 		{#if page === 'Contact'}
-			<div id="social-arrow" transition:fly={{ y: -20, duration: 500 }}>
+			<div id="social-arrow" transition:fade={{ duration: 250 }}>
 				<SocialArrow />
 			</div>
 		{/if}

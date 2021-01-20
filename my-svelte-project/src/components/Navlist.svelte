@@ -1,6 +1,7 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 	const dispatch = createEventDispatcher();
 	export let page;
 	let pageList = ['About', 'Work', 'Blog', 'Contact'];
@@ -12,6 +13,11 @@
 		});
 	};
 
+	let setSelectedColor = (x) => {
+		document.getElementById(x).style.color = '#e0a43e';
+		document.getElementById(x).style.borderBottom = '3px solid #e0a43e';
+	};
+
 	let homePress = function () {
 		console.log('Home :)');
 	};
@@ -20,9 +26,7 @@
 		if (page === 'Welcome') {
 			clearNav();
 		} else {
-			document.getElementById(page).style.color = '#e0a43e';
-			document.getElementById(page).style.borderBottom =
-				'3px solid #e0a43e';
+			setSelectedColor(page);
 		}
 		homePress = function () {
 			clearNav();
@@ -31,9 +35,7 @@
 
 	let updateSelection = (buttonVal) => {
 		clearNav();
-		document.getElementById(buttonVal).style.color = '#e0a43e';
-		document.getElementById(buttonVal).style.borderBottom =
-			'3px solid #e0a43e';
+		setSelectedColor(buttonVal);
 	};
 
 	$: if (page === 'Welcome') {
@@ -41,8 +43,7 @@
 	}
 </script>
 
-<nav>
-	<ul>
+	<ul in:fly="{{ y: -50, duration: 500 }}" out:fly="{{ y: -50, duration: 500 }}">
 		<li
 			id="About"
 			data-menu-item="About"
@@ -76,7 +77,6 @@
 			}}
 		>Contact</li>
 	</ul>
-</nav>
 
 <style>
 	* {
@@ -84,11 +84,6 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-	}
-
-	nav {
-		width: 33%;
-		align-items: center;
 	}
 
 	ul {

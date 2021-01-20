@@ -4,6 +4,7 @@
 	export let title;
 	export let leftHeaderMargin;
 	export let page;
+	export let subPage;
 	export let currentFocusItem;
 	const dispatch = createEventDispatcher();
 </script>
@@ -16,6 +17,7 @@
 		on:closeItem={() => dispatch('closeItem')}
 		on:workNavPress={() => dispatch('workNavPress')}
 		{page}
+		{subPage}
 		{currentFocusItem}
 	/>
 </div>

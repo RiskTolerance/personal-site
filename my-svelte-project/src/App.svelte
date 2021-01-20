@@ -53,8 +53,6 @@
 			currentFocusItem = webDevProjects[currentFocusIndex];
 		} else if (subPage === "Photography") {
 			currentFocusItem = photographyProjects[currentFocusIndex];
-		} else if (subPage === "Blog") {
-			console.log("itsablog!");
 		}
 	};
 
@@ -107,6 +105,7 @@
 		{title}
 		{leftHeaderMargin}
 		{page}
+		{subPage}
 		{currentFocusItem}
 		on:workNavPress={handleWorkNavigation}
 		on:closeItem={closeItem} />

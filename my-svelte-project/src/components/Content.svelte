@@ -27,7 +27,7 @@
 					{subPage}
 				/>
 			{:else}
-				<WorkPage {currentFocusItem} />
+				<WorkPage {currentFocusItem} {subPage} />
 			{/if}
 		{:else if page === 'Blog'}
 			{#if currentFocusItem === ''}

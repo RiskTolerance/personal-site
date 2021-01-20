@@ -72,6 +72,7 @@
 		height: 120%;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center;
 		transform: translateZ(-120px);
 	}
 

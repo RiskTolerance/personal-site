@@ -1,12 +1,17 @@
 <script>
 	export let currentFocusItem;
-	import marked from 'marked';
+	import ANewSite from '../../data/blogs/ANewSite.svx'
+	import SvelteFirstImpressions from '../../data/blogs/SvelteFirstImpressions.svx'
 </script>
 
 <div id="wrapper">
 	<div class="date">{currentFocusItem.date}</div>
 	<div class="text">
-		{@html marked(currentFocusItem.text)}
+		{#if currentFocusItem.titleUrl === 'ANewSite'}
+			<ANewSite />
+		{:else if currentFocusItem.titleUrl === 'SvelteFirstImpressions'}
+			<SvelteFirstImpressions />
+		{/if}
 	</div>
 </div>
 
@@ -18,19 +23,20 @@
 	}
 
 	#wrapper {
-		margin: 0 5% 0 5%;
+		margin: 0 10% 40px 10%;
 	}
 
 	.date {
 		font-family: 'lato', sans-serif;
-		font-weight: 700;
-		font-size: 1.3rem;
+		font-weight: 300;
+		font-size: 1.5rem;
 	}
 
 	.text {
 		font-family: 'lato', sans-serif;
-		font-weight: 700;
-		font-size: 1.3rem;
+		font-weight: 500;
+		font-size: 1.5rem;
 		margin-top: 40px;
+		line-height: 1.2;
 	}
 </style>

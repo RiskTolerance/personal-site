@@ -1,0 +1,31 @@
+﻿*FINALLY. I have returned.*
+
+It has been a few years since I’ve had an online presence outside of social media, and *I’ve hated it*. Posting work to social media is like throwing a cat in the ocean, sure it might float for a bit and get some attention from onlookers, but then it’s gone for all eternity.
+
+So what’s changed since the days of my exceedingly dull cookie-cutter Wix site? Most prominently, I spent 2020 learning the fundamentals of web development. Previously, my only web dev experience came from college courses that I took - but those were geared towards graphic design and didn’t really encourage learning more than the basics of HTML and CSS (Dreamweaver is the most useless Adobe program, change my mind). Those courses were especially frustrating because I knew that learning how to write basic HTML and CSS as a designer wasn’t going to benefit an actual web developer. A web developer who knows what they’re doing doesn’t need the designer to tell them that the big text is an h1 tag.
+
+So I buckled in and took a dive into JavaScript, web frameworks, CSS libraries, and the back end. I certainly could have been more efficient, but after a year I *think* that I’m finally starting to grasp the basics. After taking a stab at React, I started looking at other frameworks, stumbled across Svelte and fell in love. I’m planning on writing a post about my affair with Svelte next, so I’ll save my thoughts for that time. The point is that I used Svelte to build this site.
+
+At the time that I’m writing this, this site is only about 90% production ready. There’s a rule in development called the ninety-ninety rule which states:
+
+> The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.
+
+Hopefully, this thing doesn’t take me another 90% to get online, but time will tell and when I finally do get it online, it certainly won’t be perfect. That’s just the way it is. If you do notice a bug or have a suggestion, I would love to hear about it!
+
+So what’s next? Well, the first order of business is to implement some core site features that were not necessary for the mvp. These include:
+
+-   **A system to organize the content on blog and work pages.**: Currently, the text is added as a blob of markdown, followed by all the associated images. A more flexible system would make posts and work items more engaging.
+    
+-   **Implementing a static site and routes**: Aside from the obvious benefit of SEO, the ability to directly link a page is very important.
+    
+-   **Adding Threejs content**: Threejs is amazing. If you’ve never heard of it, it’s a Javascript library which allows 3d models to be rendered in the browser. There are some visual issues that need to be addressed first.
+
+Additionally, here are some goals for the site in general:
+
+-   **Reworking old projects**: There is nothing worse than looking back at work you were proud of in the past and the feeling of dismay that they no longer meet your standards. While knowing my skills have grown is reassuring, I want to put my best foot forward with respect to the work I display in the work section. I’m hoping to rework one project every week and provide some sort of history link in all reworked projects so viewers can go back and see how the project has changed.
+    
+-   **Weekly blog posts**: A blog post at the end of each week summarizing what I’ve accomplished.
+    
+-   **Consistent improvement**
+
+And that’s it! Thanks for reading!
