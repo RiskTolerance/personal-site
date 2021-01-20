@@ -8,10 +8,10 @@
 <div id="blog-block-wrapper">
 	<div id="section-description">
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-			libero accusamus ea quidem sunt eum facere saepe? Dolorem nam fugit,
-			libero neque omnis voluptas optio quaerat nisi deleniti! Provident,
-			eos?
+			There’s something motivational about keeping a public-facing blog.
+			Maybe it’s just the assurance that comes with proving that I’ve been
+			doing something while I’ve been dating my computer in the era of
+			Covid.
 		</p>
 	</div>
 	{#each posts as post, i}

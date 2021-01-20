@@ -3,7 +3,7 @@ export let photographyProjects = [
     title: "Products",
     titleUrl: "ProductPractice",
     headerImg: "header.jpg", 
-    description: "This was a personal project to practice product photography utilizing glass objects as the primary subjects. The LIT watermark was a logo that I was working on to represent myself and two other photographers who I was working with at the time.",
+    description: "This was a personal project to practice product photography utilizing glass objects as the primary subjects. The LIT watermark was a logo that I was working on to represent myself and two other photographers who I work with.",
     tools: "DSLR, Flash & studio, Lightroom, Photoshop",
     images: ["1.jpg", "2.jpg", "3.jpg"]},
 

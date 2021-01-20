@@ -4,6 +4,9 @@
 	import { fly } from 'svelte/transition';
 	const dispatch = createEventDispatcher();
 	export let page;
+	
+	
+	
 	let pageList = ['About', 'Work', 'Blog', 'Contact'];
 
 	let clearNav = () => {

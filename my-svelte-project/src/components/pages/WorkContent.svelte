@@ -14,26 +14,30 @@
 		{#if subPage === 'Graphic Design'}
 			<h1>Graphic Design Work</h1>
 			<p id="description">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Similique libero accusamus ea quidem sunt eum facere saepe?
-				Dolorem nam fugit, libero neque omnis voluptas optio quaerat
-				nisi deleniti! Provident, eos?
+				Illustrator has probably become the most active application on
+				my desktop. I usually have something that I’m designing, be it a
+				website or a logo. This category may stay somewhat small
+				relative to the web development category, as most of the design
+				work that I’m doing these days has to do with web development.
+				But here are the projects that stand alone.
 			</p>
 		{:else if subPage === 'Web Development'}
-			<h1>Web Dev Work</h1>
+			<h1>Web Development Work</h1>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Similique libero accusamus ea quidem sunt eum facere saepe?
-				Dolorem nam fugit, libero neque omnis voluptas optio quaerat
-				nisi deleniti! Provident, eos?
+				Before I knew anything about web development (or an ounce of
+				JavaScript) I was designing web pages. Because my process for
+				web development begins with the design process, I’ve decided to
+				include site designs in this category which might otherwise
+				belong in the graphic design section. This might change in the
+				future, but for now this section includes anything I’ve done
+				that relates to full stack web development + design.
 			</p>
 		{:else if subPage === 'Photography'}
 			<h1>Photography Work</h1>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Similique libero accusamus ea quidem sunt eum facere saepe?
-				Dolorem nam fugit, libero neque omnis voluptas optio quaerat
-				nisi deleniti! Provident, eos?
+				I love photography. Someday I’m going to have my own photo
+				development space and I’ll become an analog hipster, but till
+				that day I guess I’ll stick to Lightroom and Photoshop.
 			</p>
 		{/if}
 	</div>
