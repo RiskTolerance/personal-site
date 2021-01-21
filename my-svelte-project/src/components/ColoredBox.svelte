@@ -1,5 +1,4 @@
 <script>
-	import { dimentions } from '../data/ColoredBoxDimentions';
 	export let tweenHeight;
 	export let tweenWidth;
 	export let tweenLeft;

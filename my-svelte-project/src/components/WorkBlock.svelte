@@ -20,9 +20,9 @@
 <div class="work-block">
 	<div
 		id="click"
-		data-item={i}
-		data-link={project.titleUrl}
-		on:click={() => dispatch('workItemPress')}
+		on:click={() => dispatch('workItemPress', {
+			text: i
+		})}
 	/>
 	<div
 		class="image"

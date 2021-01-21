@@ -3,8 +3,8 @@ export let graphicDesignProjects = [{
     title: "Brewcan",
     titleUrl: "Brewcan",
     headerImg: "thumbnail.webp", 
-    description: "This project focused on creating a brand based off of the Toucan. My initial steps involved sketching and exploring the visual aspects of the toucan’s appearance in tandem with the phonetic aspects of the word “toucan”. After I was happy with the logo, I created a mockup for the brand in Blender.", tools: "Illustrator, Photoshop, Blender",
-    tools: "", 
+    description: "This project focused on creating a brand based off of the Toucan. My initial steps involved sketching and exploring the visual aspects of the toucan’s appearance in tandem with the phonetic aspects of the word “toucan”. After I was happy with the logo, I created a mockup for the brand in Blender.", 
+    tools: "Illustrator, Photoshop, Blender",
     images: ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp"]},
     
     {type: "GraphicDesign", 

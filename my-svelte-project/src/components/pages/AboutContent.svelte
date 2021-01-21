@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <div id="wrapper">
 	<div id="content">
 		<img

@@ -1,12 +1,9 @@
 <script>
 	import WorkBlock from '../WorkBlock.svelte';
-	import { fly } from 'svelte/transition';
 	import { graphicDesignProjects } from '../../data/GraphicDesignWork.js';
 	import { webDevProjects } from '../../data/WebDevWork.js';
 	import { photographyProjects } from '../../data/PhotographyWork.js';
-	import { createEventDispatcher } from 'svelte';
 	export let subPage;
-	const dispatch = createEventDispatcher();
 </script>
 
 <div id="work-block-wrapper">
@@ -45,7 +42,7 @@
 	{#if subPage === 'Graphic Design'}
 		{#each graphicDesignProjects as project, i}
 			<WorkBlock
-				on:workItemPress={() => dispatch('workItemPress')}
+				on:workItemPress
 				{project}
 				{i}
 			/>
@@ -53,7 +50,7 @@
 	{:else if subPage === 'Web Development'}
 		{#each webDevProjects as project, i}
 			<WorkBlock
-				on:workItemPress={() => dispatch('workItemPress')}
+				on:workItemPress
 				{project}
 				{i}
 			/>
@@ -61,7 +58,7 @@
 	{:else if subPage === 'Photography'}
 		{#each photographyProjects as project, i}
 			<WorkBlock
-				on:workItemPress={() => dispatch('workItemPress')}
+				on:workItemPress
 				{project}
 				{i}
 			/>

@@ -24,9 +24,9 @@
 	/>
 	<div
 		id="click"
-		data-item={i}
-		data-link={post.titleUrl}
-		on:click={() => dispatch('blogItemPress')}
+		on:click={() => dispatch('blogItemPress', {
+			text: i
+		})}
 	/>
 	<div class="info-container-color" />
 	<div class="info-container">

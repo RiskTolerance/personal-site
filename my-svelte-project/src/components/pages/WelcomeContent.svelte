@@ -1,14 +1,11 @@
-<script>
-	import { fly, fade } from 'svelte/transition';
-</script>
-
 <div id="wrapper">
 	<div id="content">
 		<h2>I'm glad you're here!</h2>
 		<p>
 			A few years ago I built cookie-cutter site on a whim and found that
 			having a place to post my work and ideas was a great way to stay
-			motivated and look back on what I had accomplished. <br />
+			motivated and look back on what I had accomplished. 
+			<br />
 			<br />
 			But my generic website was also a source of distress. I wanted to have
 			a site that reflected my creative ability and my desire to grow and improve.

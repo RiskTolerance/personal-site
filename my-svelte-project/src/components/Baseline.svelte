@@ -37,25 +37,28 @@
 			<div style="width: 40px" class="baseline" />
 			<h3
 				style="color: {graphicDesignColor}"
-				on:click={() => {
-					dispatch('workNavPress');
-				}}
+				on:click={() =>
+					dispatch('workNavPress', {
+						text: 'Graphic Design',
+					})}
 			>Graphic Design</h3>
 			<div style="width: 40px" class="baseline" />
 			<h3
 				style="color: {webDevelopmentColor}"
 				id="web-development"
-				on:click={() => {
-					dispatch('workNavPress');
-				}}
+				on:click={() =>
+					dispatch('workNavPress', {
+						text: 'Web Development',
+					})}
 			>Web Development</h3>
 			<div style="width: 40px" class="baseline" />
 			<h3
 				style="color: {photographyColor}"
 				id="photography"
-				on:click={() => {
-					dispatch('workNavPress');
-				}}
+				on:click={() =>
+					dispatch('workNavPress', {
+						text: 'Photography',
+					})}
 			>Photography</h3>
 			<div style="width: 50%;" class="baseline" />
 		{:else}

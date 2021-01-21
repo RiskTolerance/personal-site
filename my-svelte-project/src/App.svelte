@@ -18,9 +18,7 @@
 	let title = "Welcome!";
 	let page = "Welcome";
 	let subPage = "Graphic Design";
-	let currentFocusIndex = "";
 	let currentFocusItem = "";
-	// let colors = { dark: "#272727", orange: "#E0A926", light: "#F4FFF4" };
 	let leftHeaderMargin = "25";
 	let clipRatio = 40;
 	let m = { x: 0, y: 0 };
@@ -30,40 +28,36 @@
 	let handleNavigation = (event) => {
 		clipRatio = 25;
 		leftHeaderMargin = "5";
-		page = event.explicitOriginalTarget.dataset.menuItem;
-		title = event.explicitOriginalTarget.innerHTML;
+		currentFocusItem = '';
+		page = event.detail.text;
+		title = event.detail.text;
 	};
 
 	let handleWorkNavigation = (event) => {
-		subPage = event.explicitOriginalTarget.innerHTML;
+		subPage = event.detail.text;
 	};
 
 	let handleBlogItemNavigation = (event) => {
-		currentFocusIndex =
-			event.explicitOriginalTarget.attributes[1].nodeValue;
-		currentFocusItem = posts[currentFocusIndex];
+		currentFocusItem = posts[event.detail.text];
 	};
 
 	let handleWorkItemNavigation = (event) => {
-		currentFocusIndex =
-			event.explicitOriginalTarget.attributes[1].nodeValue;
 		if (subPage === "Graphic Design") {
-			currentFocusItem = graphicDesignProjects[currentFocusIndex];
+			currentFocusItem = graphicDesignProjects[event.detail.text];
 		} else if (subPage === "Web Development") {
-			currentFocusItem = webDevProjects[currentFocusIndex];
+			currentFocusItem = webDevProjects[event.detail.text];
 		} else if (subPage === "Photography") {
-			currentFocusItem = photographyProjects[currentFocusIndex];
+			currentFocusItem = photographyProjects[event.detail.text];
 		}
 	};
 
 	let handleMouseMove = (event) => {
 		m.x = event.clientX;
 		m.y = event.clientY;
-		console.log(y);
+		//console.log(y);
 	};
 
 	let closeItem = () => {
-		currentFocusIndex = "";
 		currentFocusItem = "";
 	};
 </script>
@@ -89,8 +83,6 @@
 
 <Navbar
 	on:navpress={handleNavigation}
-	on:navpress={closeItem}
-	on:workNavPress={handleWorkNavigation}
 	on:homepress={() => {
 		page = 'Welcome';
 		title = 'Welcome!';

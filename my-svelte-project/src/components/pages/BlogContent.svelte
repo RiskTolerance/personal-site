@@ -1,8 +1,6 @@
 <script>
 	import BlogBlock from '../BlogBlock.svelte';
 	import { posts } from '../../data/BlogPosts.js';
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
 </script>
 
 <div id="blog-block-wrapper">
@@ -16,7 +14,7 @@
 	</div>
 	{#each posts as post, i}
 		<BlogBlock
-			on:blogItemPress={() => dispatch('blogItemPress')}
+			on:blogItemPress
 			{post}
 			{i}
 		/>

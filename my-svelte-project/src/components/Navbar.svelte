@@ -17,7 +17,7 @@
 		</div>
 		<nav>
 			{#if y === 0}
-			<Navlist on:navpress={() => dispatch('navpress')} {page}/>
+			<Navlist on:navpress {page}/>
 		{:else}
 			<div />
 		{/if}

@@ -45,6 +45,7 @@
 
 	#social-links {
 		width: 200px;
+		margin-bottom: 40px;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -52,7 +53,7 @@
 
 	#social-arrow {
 		position: relative;
-		left: -140px;
+		left: -110px;
 		top: 0px;
 	}
 </style>

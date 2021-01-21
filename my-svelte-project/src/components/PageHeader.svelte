@@ -1,21 +1,19 @@
 <script>
 	import Baseline from './Baseline.svelte';
-	import { createEventDispatcher } from 'svelte';
 	export let title;
 	export let leftHeaderMargin;
 	export let page;
 	export let subPage;
 	export let currentFocusItem;
-	const dispatch = createEventDispatcher();
 </script>
 
 <div id="wrapper">
-	<div style={`margin-left: ${leftHeaderMargin}%;`} id="title-wrapper">
+	<div style="margin-left: {leftHeaderMargin}" id="title-wrapper">
 		<h1 id="title">{title}</h1>
 	</div>
 	<Baseline
-		on:closeItem={() => dispatch('closeItem')}
-		on:workNavPress={() => dispatch('workNavPress')}
+		on:closeItem
+		on:workNavPress
 		{page}
 		{subPage}
 		{currentFocusItem}

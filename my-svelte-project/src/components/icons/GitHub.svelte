@@ -32,7 +32,8 @@
 
 <style>
 	#btn {
-		scale: 0.8;
+		width: 50px;
+		height: 50px;
 		margin-left: 20px;
 		cursor: pointer;
 	}

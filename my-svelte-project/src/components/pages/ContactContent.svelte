@@ -1,5 +1,3 @@
-<script></script>
-
 <div id="contact-block-wrapper">
 	<div id="section-description">
 		<h1>Get in touch!</h1>
