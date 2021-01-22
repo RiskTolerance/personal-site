@@ -1,7 +1,7 @@
 <script>
 	export let currentFocusItem;
-	import ANewSite from '../../data/blogs/ANewSite.svx'
-	import SvelteFirstImpressions from '../../data/blogs/SvelteFirstImpressions.svx'
+	import ANewSite from '../../data/blog_text/ANewSite.svx'
+	import SvelteFirstImpressions from '../../data/blog_text/SvelteFirstImpressions.svx'
 </script>
 
 <div id="wrapper">

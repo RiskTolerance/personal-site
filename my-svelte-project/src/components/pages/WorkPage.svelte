@@ -1,16 +1,14 @@
 <script>
-	export let currentFocusItem;
-	console.log(currentFocusItem.images[0]);
+import Img from '../workPagePartials/Img.svelte';
+export let currentFocusItem;
+console.log(currentFocusItem.images[0]);
 </script>
 
 <div id="wrapper">
-	<h1>{currentFocusItem.title}</h1>
 	<p>{currentFocusItem.description}</p>
+	<p>Tools used: {currentFocusItem.tools}</p>
 	{#each currentFocusItem.images as image}
-		<img
-			src="./images/projects/{currentFocusItem.type}/{currentFocusItem.titleUrl}/{image}"
-			alt=""
-		/>
+		<Img {currentFocusItem} {image}/>
 	{/each}
 </div>
 
@@ -23,15 +21,14 @@
 
 	#wrapper {
 		margin: 0 5% 0 5%;
-	}
-
-	img {
-		height: 300px;
+		display: flex;
+		flex-flow: wrap;
 	}
 
 	p {
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
 		font-size: 1.5rem;
+		margin-bottom: 40px;
 	}
 </style>

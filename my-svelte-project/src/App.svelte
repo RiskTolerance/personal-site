@@ -1,6 +1,4 @@
 <script>
-	//node
-
 	//components
 	import Navbar from "./components/Navbar.svelte";
 	import PageHeader from "./components/PageHeader.svelte";

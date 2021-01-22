@@ -5,7 +5,15 @@ export let graphicDesignProjects = [{
     headerImg: "thumbnail.webp", 
     description: "This project focused on creating a brand based off of the Toucan. My initial steps involved sketching and exploring the visual aspects of the toucan’s appearance in tandem with the phonetic aspects of the word “toucan”. After I was happy with the logo, I created a mockup for the brand in Blender.", 
     tools: "Illustrator, Photoshop, Blender",
-    images: ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp"]},
+    images: [
+        {imageUrl: "1.webp", alt: "Project thumbnail", hasDescription: true, description: "What's up homie", width: "20"},
+        {imageUrl: "2.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
+        {imageUrl: "3.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
+        {imageUrl: "4.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
+        {imageUrl: "5.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
+        {imageUrl: "6.webp", imageAlt: "Photoshop mockup", hasDescription: true, description: "Mockup in photoshop", width: "40"}, 
+        {imageUrl: "7.webp", imageAlt: "Blender render", hasDescription: false, description: "", width: "90"}]
+    },
     
     {type: "GraphicDesign", 
     title: "Replii",

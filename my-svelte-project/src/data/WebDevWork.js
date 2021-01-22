@@ -27,9 +27,9 @@ export let webDevProjects = [
     titleUrl: "RCIS",
     title: "RCIS",
     headerImg: "header.jpg", 
-    description: "This mock-up was created during my 2019 summer internship for RCIS. I decided to take a bold and cinematic approach in this design, and while the client didn’t choose this design in the end, I believe that it’s a strong concept",
+    description: "This mock-up was created during my 2019 summer internship for RCIS. I decided to take a bold and cinematic approach in this design, and while the client didn’t choose this design in the end, I believe that it’s a strong concept.",
     tools: "Illustrator, Photoshop", 
-    images: ["1.jpg", "2.jpg", "3.jpg"]},
+    images: ["1.webp", "2.webp"]},
 
     {type: "WebDev",
     titleUrl: "KiKitchen",
