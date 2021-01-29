@@ -53,7 +53,7 @@
 
 	#social-arrow {
 		position: relative;
-		left: -110px;
-		top: 0px;
+		left: -120px;
+		top: -10px;
 	}
 </style>

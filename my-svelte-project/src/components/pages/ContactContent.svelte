@@ -19,30 +19,36 @@
 </div>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		color: white;
+	h1 {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
 	}
 
 	p {
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 2rem;
+	}
+
+	s {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 2rem;
 	}
 
 	#contact-block-wrapper {
 		display: flex;
-		justify-content: flex-start;
-		margin-left: 5%;
-		margin-bottom: 40px;
+		flex-direction: column;
+		margin-bottom: 4rem;
 		width: 90%;
 		height: 90%;
 		flex-wrap: wrap;
 	}
 
 	#section-description {
-		margin: 40px;
+		margin: 4rem 0 2rem 15%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -50,7 +56,7 @@
 	}
 
 	#contact-info {
-		margin: 40px;
+		margin: 0 0 4rem 15%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

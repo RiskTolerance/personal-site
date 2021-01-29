@@ -21,6 +21,11 @@
 		dimentions.top = generatePosition(10, heightConstraint);
 	};
 
+	// const generateBgNumber = () => {
+	// 	return Math.floor(Math.random() * Math.floor(3));
+	// }
+	// let bgNumber = generateBgNumber();
+	
 	generateNewDimentions();
 
 	setInterval(() => {
@@ -30,7 +35,7 @@
 
 <div id="wrapper">
 	<div style="width:{clipRatio}%" id="img-wrapper">
-		<img src="./images/backgrounds/1.jpg" alt="" />
+		<img src="./images/backgrounds/2.webp" width="960" height="1080" alt="nature background" />
 		<div id="color-box-container">
 			<TweenedStore />
 		</div>
@@ -54,9 +59,11 @@
 
 	img {
 		position: relative;
-		scale: 1.3;
-		top: -15%;
-		left: -50%;
+		aspect-ratio: attr(width) / attr(height);
+		height: 100%;
+		width: auto;
+		top: 0px;
+		left: 0px;
 	}
 
 	#color-box-container {

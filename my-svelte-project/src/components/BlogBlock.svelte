@@ -40,9 +40,9 @@
 
 <style>
 	* {
+		color: #272727;
 		margin: 0;
 		padding: 0;
-		color: #272727;
 	}
 
 	#click {
@@ -51,15 +51,15 @@
 		height: 100%;
 		bottom: 0px;
 		transform: translateZ(51px);
-		cursor: pointer;
+		cursor: default;
 	}
 
 	.blog-block {
 		display: flex;
 		align-items: flex-end;
 		position: relative;
-		width: 465px;
-		height: 350px;
+		width: 550px;
+		height: 400px;
 		transform-style: preserve-3d;
 		border: 40px solid #272727;
 	}
@@ -78,12 +78,13 @@
 
 	.info-container-color {
 		padding: 10px;
-		height: 25%;
+		height: 30%;
 		width: 100%;
 		background-color: #e0a43e;
 		clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
 		transform: translateZ(1px);
 	}
+
 	.info-container {
 		position: absolute;
 		bottom: 0;
@@ -99,8 +100,9 @@
 	#title {
 		font-family: 'Lato', sans-serif;
 		font-weight: 900;
-		font-size: 2rem;
-		margin-left: 20px;
+		font-size: 2.5rem;
+		margin-left: 2rem;
+		margin-bottom: 5px;
 	}
 
 	#date-container {
@@ -108,18 +110,20 @@
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
+		margin-bottom: 1rem;
 	}
 
 	#line {
 		height: 5px;
+		margin-top:2.5px;
 		width: 70%;
 		background-color: #272727;
 	}
 
 	#date {
 		font-family: 'Lato', sans-serif;
-		font-weight: 300;
-		font-size: 1.3rem;
-		margin-left: 20px;
+		font-weight: 500;
+		font-size: 1.8rem;
+		margin-left: 2rem;
 	}
 </style>

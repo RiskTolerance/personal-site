@@ -32,25 +32,19 @@
 </div>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		color: white;
-	}
-
 	#click {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		bottom: 0px;
 		transform: translateZ(51px);
-		cursor: pointer;
+		cursor: default;
 	}
 
 	.project-title {
 		font-family: 'Lato', sans-serif;
 		font-weight: 900;
-		font-size: 2rem;
+		font-size: 3rem;
 		transform: translateZ(50px);
 		text-shadow: 0px 0px 4px #000000;
 	}
@@ -60,13 +54,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 320px;
-		height: 320px;
+		width: 370px;
+		height: 370px;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		transform-style: preserve-3d;
-		border: 20px solid #272727;
+		border: 2rem solid #272727;
 	}
 
 	.image {

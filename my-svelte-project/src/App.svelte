@@ -17,7 +17,7 @@
 	let page = "Welcome";
 	let subPage = "Graphic Design";
 	let currentFocusItem = "";
-	let leftHeaderMargin = "25";
+	let leftHeaderMargin = '100px';
 	let clipRatio = 40;
 	let m = { x: 0, y: 0 };
 	let y;
@@ -25,7 +25,6 @@
 	//functions
 	let handleNavigation = (event) => {
 		clipRatio = 25;
-		leftHeaderMargin = "5";
 		currentFocusItem = '';
 		page = event.detail.text;
 		title = event.detail.text;
@@ -52,7 +51,6 @@
 	let handleMouseMove = (event) => {
 		m.x = event.clientX;
 		m.y = event.clientY;
-		//console.log(y);
 	};
 
 	let closeItem = () => {
@@ -84,8 +82,8 @@
 	on:homepress={() => {
 		page = 'Welcome';
 		title = 'Welcome!';
-		clipRatio = 40;
-		leftHeaderMargin = '25';
+		clipRatio = 45;
+		leftHeaderMargin = '100px';
 	}}
 	{y} {page} />
 
@@ -110,8 +108,4 @@
 </main>
 
 <!-- fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link
-	href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
-	rel="stylesheet" />
-<link rel="stylesheet" href="https://use.typekit.net/bar8qrt.css" />
+

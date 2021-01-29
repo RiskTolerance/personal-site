@@ -29,9 +29,6 @@
 <style>
 	* {
 		display: flex;
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
 	}
 
 	nav {
@@ -41,13 +38,13 @@
 
 	#outer-wrapper {
 		width: 92vw;
-		z-index: 20;
+		z-index: 0;
 		position: fixed;
 		top: 0px;
 		left: 0px;
 		align-content: center;
 		justify-self: center;
-		margin-top: 3vw;
+		margin-top: 4rem;
 		margin-left: 4vw;
 	}
 

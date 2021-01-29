@@ -24,13 +24,12 @@
 	* {
 		margin: 0;
 		padding: 0;
-		color: white;
 	}
 
 	#wrapper {
 		display: flex;
 		height: 15vh;
-		padding-top: 15vh;
+		margin-top: 15vh;
 	}
 
 	#title-wrapper {
@@ -39,11 +38,11 @@
 	}
 
 	#title {
-		line-height: 8rem;
+		height: 100%;
 		font-family: essonnes-headline, serif;
 		font-weight: 700;
 		font-style: italic;
-		font-size: 10rem;
+		font-size: 13.5rem;
 		margin-right: 4rem;
 		margin-left: 4rem;
 		align-self: flex-end;

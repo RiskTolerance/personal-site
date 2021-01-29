@@ -22,24 +22,18 @@
 </div>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		color: white;
-	}
-
 	#blog-block-wrapper {
 		display: flex;
 		justify-content: flex-start;
 		margin-left: 5%;
-		margin-bottom: 40px;
+		margin-bottom: 4rem;
 		width: 90%;
 		height: 90%;
 		flex-wrap: wrap;
 	}
 
 	#section-description {
-		margin: 40px;
+		margin: 4rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -49,6 +43,6 @@
 	p {
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 </style>

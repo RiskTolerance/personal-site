@@ -13,7 +13,7 @@
 </script>
 
 <div id="outer-content-wrapper">
-	<div style="margin-left: {clipRatio + 3}%" id="inner-content-wrapper">
+	<div style="margin-left: {clipRatio + 5}%" id="inner-content-wrapper">
 		{#if page === 'Welcome'}
 			<WelcomeContent />
 		{:else if page === 'About'}
@@ -46,6 +46,8 @@
 		display: flex;
 		min-height: 60vh;
 		width: 100%;
+		justify-self: center;
+		justify-content: center;
 	}
 
 	#inner-content-wrapper {

@@ -10,7 +10,7 @@
 </script>
 
 <div id="btn" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut}>
-	<a href="https://github.com/RiskTolerance" target="_blank">
+	<a href="https://github.com/RiskTolerance" target="_blank" rel=”noreferrer” aria-label="Github link">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
 			<g fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
 				<g transform="translate(-264 -939)">
@@ -32,8 +32,8 @@
 
 <style>
 	#btn {
-		width: 50px;
-		height: 50px;
+		width: 60px;
+		height: 60px;
 		margin-left: 20px;
 		cursor: pointer;
 	}

@@ -25,19 +25,12 @@
 </div>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		color: white;
-	}
-
 	#wrapper {
 		display: flex;
 		width: 100%;
 		height: 100%;
-		margin-top: 40px;
-		margin-bottom: 40px;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
 		justify-content: center;
 	}
 
@@ -46,13 +39,13 @@
 		flex-direction: row;
 		width: 80%;
 		height: 100%;
-		padding-bottom: 2.5rem;
+		padding-bottom: 4rem;
 		justify-content: space-around;
 	}
 
 	#portrait {
 		display: block;
-		max-height: 400px;
+		height: 400px;
 		margin-right: 60px;
 	}
 
@@ -60,6 +53,6 @@
 		width: 50%;
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 </style>

@@ -58,9 +58,6 @@
 <style>
 	* {
 		display: flex;
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
 	}
 
 	ul {
@@ -75,12 +72,13 @@
 		align-self: center;
 		font-family: 'Lato', sans-serif;
 		font-weight: 700;
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	li:hover {
 		color: #e0a43e !important;
-		cursor: pointer;
+		cursor: default;
 		border-bottom: 3px solid #e0a43e;
+		transition: 100ms;
 	}
 </style>

@@ -11,7 +11,7 @@ export let graphicDesignProjects = [{
         {imageUrl: "3.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
         {imageUrl: "4.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
         {imageUrl: "5.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
-        {imageUrl: "6.webp", imageAlt: "Photoshop mockup", hasDescription: true, description: "Mockup in photoshop", width: "40"}, 
+        {imageUrl: "6.webp", imageAlt: "Photoshop mockup", hasDescription: true, description: "Mockup in Photoshop", width: "40"}, 
         {imageUrl: "7.webp", imageAlt: "Blender render", hasDescription: false, description: "", width: "90"}]
     },
     

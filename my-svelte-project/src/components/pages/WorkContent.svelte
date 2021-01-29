@@ -10,7 +10,7 @@
 	<div id="section-description">
 		{#if subPage === 'Graphic Design'}
 			<h1>Graphic Design Work</h1>
-			<p id="description">
+			<p>
 				Illustrator has probably become the most active application on
 				my desktop. I usually have something that I’m designing, be it a
 				website or a logo. This category may stay somewhat small
@@ -38,32 +38,21 @@
 			</p>
 		{/if}
 	</div>
-
-	{#if subPage === 'Graphic Design'}
-		{#each graphicDesignProjects as project, i}
-			<WorkBlock
-				on:workItemPress
-				{project}
-				{i}
-			/>
-		{/each}
-	{:else if subPage === 'Web Development'}
-		{#each webDevProjects as project, i}
-			<WorkBlock
-				on:workItemPress
-				{project}
-				{i}
-			/>
-		{/each}
-	{:else if subPage === 'Photography'}
-		{#each photographyProjects as project, i}
-			<WorkBlock
-				on:workItemPress
-				{project}
-				{i}
-			/>
-		{/each}
-	{/if}
+	<div id="section">
+		{#if subPage === 'Graphic Design'}
+			{#each graphicDesignProjects as project, i}
+				<WorkBlock on:workItemPress {project} {i} />
+			{/each}
+		{:else if subPage === 'Web Development'}
+			{#each webDevProjects as project, i}
+				<WorkBlock on:workItemPress {project} {i} />
+			{/each}
+		{:else if subPage === 'Photography'}
+			{#each photographyProjects as project, i}
+				<WorkBlock on:workItemPress {project} {i} />
+			{/each}
+		{/if}
+	</div>
 </div>
 
 <style>
@@ -75,25 +64,37 @@
 
 	#work-block-wrapper {
 		display: flex;
-		justify-content: flex-start;
-		margin-left: 5%;
-		margin-bottom: 40px;
+		align-items: center;
+		flex-direction: column;
+		margin: 40px 0;
 		width: 90%;
-		height: 90%;
-		flex-wrap: wrap;
 	}
 
 	#section-description {
-		margin: 40px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		width: 90%;
+		max-width: 1080px;
+		margin-bottom: 8rem;
+	}
+
+	#section {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		max-width: 1200px;
+	}
+
+	h1 {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
 	}
 
 	p {
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 </style>

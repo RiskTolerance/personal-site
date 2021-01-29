@@ -68,7 +68,7 @@
 					class="baseline"
 				/>
 				<h3
-					style="color: #e0a43e; width: 40%; font-size: 2.5rem; font-family: essonnes-headline, serif; line-height: 33px;"
+					style="color: #e0a43e; width: 40%; font-size: 4rem; font-family: essonnes-headline, serif; line-height: 33px;"
 				>
 					{currentFocusItem.title}
 				</h3>
@@ -91,7 +91,7 @@
 					class="baseline"
 				/>
 				<h3
-					style="color: #e0a43e; width: 40%; font-size: 2.5rem; font-family: essonnes-headline, serif; line-height: 33px;"
+					style="color: #e0a43e; width: 40%; font-size: 4rem; font-family: essonnes-headline, serif; line-height: 33px;"
 				>
 					{currentFocusItem.title}
 				</h3>
@@ -111,7 +111,6 @@
 	* {
 		margin: 0;
 		padding: 0;
-		color: white;
 	}
 
 	#wrapper {
@@ -121,7 +120,7 @@
 	}
 
 	.baseline {
-		height: 10px;
+		height: 1rem;
 		background-color: white;
 		align-self: flex-end;
 		vertical-align: bottom;
@@ -138,7 +137,7 @@
 		text-align: center;
 		line-height: 17px;
 		font-family: 'Lato', sans-serif;
-		font-size: 1.4rem;
+		font-size: 2rem;
 		min-width: 220px;
 		color: '#F4FFF4';
 	}
