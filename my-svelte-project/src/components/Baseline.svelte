@@ -143,7 +143,7 @@
 	}
 
 	h3:hover {
-		color: #e0a43e;
-		cursor: pointer;
+		color: #e0a43e !important;
+		cursor: default;
 	}
 </style>

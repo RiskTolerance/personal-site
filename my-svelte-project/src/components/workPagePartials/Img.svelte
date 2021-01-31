@@ -27,15 +27,15 @@
 	* {
 		margin: 0;
 		padding: 0;
-		color: white;
+		color: #F4FFF4;
 	}
 
 	p {
 		width: 100%;
-		margin-bottom: 40px;
+		margin-bottom: 2rem;
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	img {

@@ -2,7 +2,7 @@
 	<div id="content">
 		<img
 			id="portrait"
-			src="/images/portrait.jpeg"
+			src="/images/portrait.webp"
 			alt="Portrait of Isaac Druin"
 		/>
 		<p>
@@ -18,7 +18,7 @@
 			spent three months at Ironhack, a web development bootcamp in Miami.
 			<br />
 			<br />
-			Some other hobbies include gaming and spending time outdoors
+			Some other hobbies of mine include gaming and spending time outdoors
 			(camping, snowboarding).
 		</p>
 	</div>

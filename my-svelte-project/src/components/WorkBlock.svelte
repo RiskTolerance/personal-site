@@ -42,6 +42,8 @@
 	}
 
 	.project-title {
+		width: 80%;
+		text-align: center;
 		font-family: 'Lato', sans-serif;
 		font-weight: 900;
 		font-size: 3rem;
@@ -60,7 +62,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		transform-style: preserve-3d;
-		border: 2rem solid #272727;
+		border: 2.5rem solid #272727;
 	}
 
 	.image {

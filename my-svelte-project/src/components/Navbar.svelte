@@ -13,6 +13,8 @@
 				on:click={() => dispatch('homepress')}
 				src="./images/Logo.svg"
 				alt="logo"
+				width="80"
+				height="80"
 			/>
 		</div>
 		<nav>
@@ -57,6 +59,8 @@
 
 	#logo img {
 		width: 80px;
+		height: 80px;
+		z-index: 20;
 	}
 
 	#logo img:hover {
