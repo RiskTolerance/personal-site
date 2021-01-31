@@ -1,9 +1,17 @@
+<script>
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		document.lazyLoadInstance.update();
+	});
+</script>
+
 <div id="wrapper">
-	<div id="content">
+	<div id="content">	
 		<img
-			loading="lazy"
+			class="lazy"
 			id="portrait"
-			src="/images/portrait.webp"
+			data-src="/images/portrait.webp"
 			alt="Portrait of Isaac Druin"
 		/>
 		<p>

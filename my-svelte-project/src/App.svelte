@@ -1,4 +1,12 @@
 <script>
+	//lazy load images 
+	import LazyLoad from 'vanilla-lazyload';
+	if (!document.lazyLoadInstance) {
+		document.lazyLoadInstance = new LazyLoad({
+			elements_selector: '.lazy',
+		});
+	}
+
 	//components
 	import Navbar from './components/Navbar.svelte';
 	import PageHeader from './components/PageHeader.svelte';
@@ -95,7 +103,7 @@
 </main>
 
 <!-- links -->
-<link rel="preload" as="image" href="./images/backgrounds/2.webp" />
+<link as="image" href="./images/backgrounds/2.webp" />
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
 	href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
