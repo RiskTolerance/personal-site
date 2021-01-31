@@ -3,6 +3,12 @@ html,
 body {
 	box-sizing: border-box;
 	font-size: 10px;
-	color: #F4FFF4;
+	color: #f4fff4;
 	font-family: 'lato', sans-serif;
+}
+
+@-moz-document url-prefix() {
+	img:-moz-loading {
+		visibility: hidden;
+	}
 }
