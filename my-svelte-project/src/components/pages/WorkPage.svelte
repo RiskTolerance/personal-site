@@ -1,7 +1,6 @@
 <script>
 import Img from '../workPagePartials/Img.svelte';
 export let currentFocusItem;
-console.log(currentFocusItem.images[0]);
 </script>
 
 <div id="wrapper">
