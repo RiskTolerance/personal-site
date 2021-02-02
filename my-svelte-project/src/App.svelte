@@ -1,5 +1,5 @@
 <script>
-	//lazy load images 
+	//lazy load images
 	import LazyLoad from 'vanilla-lazyload';
 	if (!document.lazyLoadInstance) {
 		document.lazyLoadInstance = new LazyLoad({
@@ -75,7 +75,7 @@
 	on:homepress={() => {
 		page = 'Welcome';
 		title = 'Welcome!';
-		clipRatio = 45;
+		clipRatio = 40;
 		leftHeaderMargin = '100px';
 	}}
 	{y}

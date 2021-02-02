@@ -15,7 +15,12 @@
 			alt="Portrait of Isaac Druin"
 		/>
 		<p>
-			Hello! <br />
+			<strong
+				style="color: #e0a43e; font-family: 'Lato', sans-serif; font-weight: 900; font-size: 2rem;"
+			>
+				Hello!
+			</strong>
+			<br />
 			<br />
 			My name is Isaac and I hail from the frozen wasteland of South Dakota.
 			I'm a graphic designer interested in web development, tradtional media,

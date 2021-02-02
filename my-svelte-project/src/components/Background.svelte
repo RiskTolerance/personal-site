@@ -2,7 +2,7 @@
 	import { dimentions } from '../data/ColoredBoxDimentions';
 	import TweenedStore from './TweenedStore.svelte';
 	export let clipRatio;
-	$: console.log(clipRatio);
+	
 	let windowWidth = window.innerWidth;
 	let windowHeight = window.innerHeight;
 
@@ -51,7 +51,7 @@
 
 <div id="wrapper">
 	<div id="img-wrapper" style="width: {clipRatio}%;">
-		<img src="./images/backgrounds/2.webp" alt="nature background" />
+		<img src="./images/backgrounds/2.webp" alt="background" />
 		<div id="color-box-container" style="width: {clipRatio}%;">
 			<TweenedStore />
 		</div>
