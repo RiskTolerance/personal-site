@@ -6,7 +6,7 @@ export let graphicDesignProjects = [{
     description: "This project focused on creating a brand based off of the Toucan. My initial steps involved sketching and exploring the visual aspects of the toucan’s appearance in tandem with the phonetic aspects of the word “toucan”. After I was happy with the logo, I created a mockup for the brand in Blender.", 
     tools: "Illustrator, Photoshop, Blender",
     images: [
-        {imageUrl: "1.webp", alt: "Project thumbnail", hasDescription: true, description: "What's up homie", width: "20"},
+        {imageUrl: "1.webp", imageAlt: "Project thumbnail", hasDescription: true, description: "", width: "20"},
         {imageUrl: "2.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
         {imageUrl: "3.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
         {imageUrl: "4.webp", imageAlt: "Project thumbnail", hasDescription: false, description: "", width: "20"},
@@ -16,12 +16,20 @@ export let graphicDesignProjects = [{
     },
     
     {type: "GraphicDesign", 
-    title: "Replii",
+    title: "Replii + Iconic",
     titleUrl: "Replii",
     headerImg: "thumbnail.webp", 
-    description: "Without a doubt, this is my biggest solo project. Created for my senior show at the University of South Dakota, Replii is a company which recreates physical spaces to be accessed and experienced in the web browser. The space which I created is a replica of the university gallery where I exhibited the project.",
+    description: "Without a doubt, this is my biggest solo project. Created for my senior show at the University of South Dakota, Replii is a company which recreates physical spaces to be accessed and experienced in the web browser. The space which I created is a replica of the university gallery where I exhibited the project. Download and run the project here: https://bit.ly/2MthdEd",
     tools: "Blender, Unity, Illustrator", 
-    images: ["1.webp", "2.webp", "3.webp"]},
+    images: [
+        {imageUrl: "1.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
+        {imageUrl: "2.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
+        {imageUrl: "3.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
+        {imageUrl: "4.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
+        {imageUrl: "5.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
+        {imageUrl: "6.webp", imageAlt: "", hasDescription: false, description: "", width: "90"}, 
+        {imageUrl: "7.webp", imageAlt: "", hasDescription: false, description: "", width: "90"}
+    ]},
 
     {type: "GraphicDesign", 
     title: "Sculptura Ceramics",
@@ -41,9 +49,11 @@ export let graphicDesignProjects = [{
 
     {type: "GraphicDesign", 
     title: "Hong Kong Infographic",
-    titleUrl: "HongKongInfoGraphic",
+    titleUrl: "HongKong",
     headerImg: "thumbnail.webp",
-    description: "Placeholder",
+    description: "",
     tools: "", 
-    images: ["1.jpg", "2.jpg", "3.jpg"]},
+    images: [
+        {imageUrl: "1.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
+    ]},
 ];
