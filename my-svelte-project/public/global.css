@@ -8,6 +8,10 @@ body {
 	scrollbar-width: none;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 @-moz-document url-prefix() {
 	img:-moz-loading {
 		visibility: hidden;
