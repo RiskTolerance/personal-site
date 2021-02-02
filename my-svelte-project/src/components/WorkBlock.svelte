@@ -20,9 +20,10 @@
 <div class="work-block">
 	<div
 		id="click"
-		on:click={() => dispatch('workItemPress', {
-			text: i
-		})}
+		on:click={() =>
+			dispatch('workItemPress', {
+				text: i,
+			})}
 	/>
 	<div
 		class="image"
@@ -31,7 +32,7 @@
 	<p class="project-title">{project.title}</p>
 </div>
 
-<style>
+<style type="text/css">
 	#click {
 		position: absolute;
 		width: 100%;

@@ -4,7 +4,7 @@ export let currentFocusItem;
 </script>
 
 <div id="wrapper">
-	<p>{currentFocusItem.description}</p>
+	<p>{@html currentFocusItem.description}</p>
 	<p>Tools used: {currentFocusItem.tools}</p>
 	{#each currentFocusItem.images as image}
 		<Img {currentFocusItem} {image}/>
@@ -23,7 +23,11 @@ export let currentFocusItem;
 		flex-flow: wrap;
 	}
 
-	p {
+	p :global(a) {
+		color: orange;
+	}
+
+	p, p :global(a) {
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
 		font-size: 2rem;

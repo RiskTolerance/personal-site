@@ -19,7 +19,7 @@ export let graphicDesignProjects = [{
     title: "Replii + Iconic",
     titleUrl: "Replii",
     headerImg: "thumbnail.webp", 
-    description: "Without a doubt, this is my biggest solo project. Created for my senior show at the University of South Dakota, Replii is a company which recreates physical spaces to be accessed and experienced in the web browser. The space which I created is a replica of the university gallery where I exhibited the project. Download and run the project here: https://bit.ly/2MthdEd",
+    description: "Without a doubt, this is my biggest solo project. Created for my senior show at the University of South Dakota, Replii is a company which recreates physical spaces to be accessed and experienced in the web browser. The digital space which I created in Unity is a replica of the university gallery where I exhibited the project. <br><br> You can download and run the project <a href=\"https://bit.ly/2MthdEd\">here</a>.",
     tools: "Blender, Unity, Illustrator", 
     images: [
         {imageUrl: "1.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
@@ -51,8 +51,8 @@ export let graphicDesignProjects = [{
     title: "Hong Kong Infographic",
     titleUrl: "HongKong",
     headerImg: "thumbnail.webp",
-    description: "",
-    tools: "", 
+    description: "I created this infographic in response to the 2019-2020 Hong Kong protests. During this time, many large corporations distanced themselves from the unrest as voicing support would cause retaliation from the Chinese government.",
+    tools: "Illustrator",
     images: [
         {imageUrl: "1.webp", imageAlt: "", hasDescription: false, description: "", width: "90"},
     ]},

@@ -7,7 +7,7 @@
 </script>
 
 <div id="wrapper">
-	<div id="content">	
+	<div id="content">
 		<img
 			class="lazy"
 			id="portrait"
@@ -33,7 +33,7 @@
 	</div>
 </div>
 
-<style>
+<style type="text/css">
 	#wrapper {
 		display: flex;
 		width: 100%;

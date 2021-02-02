@@ -48,6 +48,7 @@
 		width: 100%;
 		justify-self: center;
 		justify-content: center;
+		align-items: center;
 	}
 
 	#inner-content-wrapper {
@@ -57,5 +58,6 @@
 		width: 100%;
 		height: 100%;
 		justify-content: center;
+		align-items: center;
 	}
 </style>

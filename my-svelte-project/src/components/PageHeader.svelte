@@ -5,11 +5,16 @@
 	export let page;
 	export let subPage;
 	export let currentFocusItem;
+	let windowHeight;
+	$: windowHeightPercent = (windowHeight/1080);
+	$: titleSize = windowHeightPercent * 14.8;
 </script>
+
+<svelte:window bind:innerHeight="{windowHeight}"/>
 
 <div id="wrapper">
 	<div style="margin-left: {leftHeaderMargin}" id="title-wrapper">
-		<h1 id="title">{title}</h1>
+		<h1 id="title" style="font-size: {titleSize}rem">{title}</h1>
 	</div>
 	<Baseline
 		on:closeItem
@@ -17,6 +22,7 @@
 		{page}
 		{subPage}
 		{currentFocusItem}
+		{windowHeightPercent}
 	/>
 </div>
 
@@ -42,7 +48,7 @@
 		font-family: essonnes-headline, serif;
 		font-weight: 700;
 		font-style: italic;
-		font-size: 13.5rem;
+		/* font-size: 13.5rem; */
 		margin-right: 4rem;
 		margin-left: 4rem;
 		align-self: flex-end;

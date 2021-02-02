@@ -26,13 +26,15 @@
 	let subPage = 'Graphic Design';
 	let currentFocusItem = '';
 	let leftHeaderMargin = '100px';
-	let clipRatio = 40;
+	// clip ratio default: 40
+	$: clipRatio = 40;
 	let m = { x: 0, y: 0 };
 	let y;
 
 	//functions
 	let handleNavigation = (event) => {
-		clipRatio = 25;
+		//clip ratio default: 25
+		clipRatio = 15;
 		currentFocusItem = '';
 		page = event.detail.text;
 		title = event.detail.text;
@@ -122,7 +124,7 @@
 
 	main {
 		width: 92vw;
-		margin-left: 4vw;
+		margin: 0 4vw 0;
 		flex-direction: column;
 		height: 100%;
 	}

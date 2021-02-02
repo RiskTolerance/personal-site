@@ -80,9 +80,9 @@
 
 	#section {
 		display: flex;
-		justify-content: flex-start;
+		justify-content: center;
 		flex-wrap: wrap;
-		max-width: 1200px;
+		max-width: 1110px;
 	}
 
 	h1 {

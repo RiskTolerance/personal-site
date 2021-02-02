@@ -5,9 +5,12 @@
 	export let page;
 	export let currentFocusItem;
 	export let subPage;
+	export let windowHeightPercent;
 	let graphicDesignColor = '#F4FFF4';
 	let webDevelopmentColor = '#F4FFF4';
 	let photographyColor = '#F4FFF4';
+
+	$: titleSize = windowHeightPercent * 4.5;
 
 	let clearSelection = () => {
 		graphicDesignColor = '#F4FFF4';
@@ -68,7 +71,7 @@
 					class="baseline"
 				/>
 				<h3
-					style="color: #e0a43e; width: 40%; font-size: 4rem; font-family: essonnes-headline, serif; line-height: 33px;"
+					style="color: #e0a43e; width: 40%; font-size: {titleSize}rem; font-family: essonnes-headline, serif; line-height: 33px;"
 				>
 					{currentFocusItem.title}
 				</h3>
@@ -91,7 +94,7 @@
 					class="baseline"
 				/>
 				<h3
-					style="color: #e0a43e; width: 40%; font-size: 4rem; font-family: essonnes-headline, serif; line-height: 33px;"
+					style="color: #e0a43e; width: 40%; font-size: {titleSize}rem; font-family: essonnes-headline, serif; line-height: 33px;"
 				>
 					{currentFocusItem.title}
 				</h3>
