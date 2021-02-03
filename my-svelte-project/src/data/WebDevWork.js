@@ -85,8 +85,12 @@ export let webDevProjects = [
     title: "Ki Kitchen",
     headerImg: "thumbnail.webp", 
     description: "This site layout was created to support a suite of smart appliances under the fictitious Ki Kitchen brand. The brand identity focused on a clean, modern aesthetic. I utilized a bright orange to highlight important information on each page.",
-    tools: "Illustrator, Photoshop", 
-    images: ["1.jpg", "2.jpg", "3.jpg"]},
+    tools: "Illustrator, Photoshop, HTML, CSS", 
+    images: [
+        {imageUrl: "1.webp", alt: "", hasDescription: false, description: "", width: "40"}, 
+        {imageUrl: "2.webp", alt: "", hasDescription: false, description: "", width: "40"}, 
+        {imageUrl: "3.webp", alt: "", hasDescription: false, description: "", width: "40"}
+    ]},
     
     {type: "WebDev",
     titleUrl: "Card",
@@ -109,7 +113,14 @@ export let webDevProjects = [
     titleUrl: "GOAT",
     title: "GOAT",
     headerImg: "thumbnail.webp", 
-    description: "The first JavaScript project that I worked on at Ironhack.",
+    description: "The first JavaScript project that I worked on at Ironhack. <br><br> You can play the game <a href=\"https://risktolerance.github.io/IronHack-Project-1-GOAT-game/\">here</a>.",
     tools: "Javascript, Phaser", 
-    images: ["1.jpg", "2.jpg", "3.jpg"]}
+    images: [
+        {imageUrl: "1.webp", alt: "", hasDescription: false, description: "", width: "90"}, 
+        {imageUrl: "2.webp", alt: "", hasDescription: false, description: "", width: "90"}, 
+        {imageUrl: "3.webp", alt: "", hasDescription: false, description: "", width: "90"}, 
+        {imageUrl: "4.webp", alt: "", hasDescription: false, description: "", width: "90"}, 
+        {imageUrl: "5.webp", alt: "", hasDescription: false, description: "", width: "90"}, 
+        {imageUrl: "6.webp", alt: "", hasDescription: false, description: "", width: "90"}
+    ]}
 ];

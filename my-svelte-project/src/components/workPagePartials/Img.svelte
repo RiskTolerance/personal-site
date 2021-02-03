@@ -1,7 +1,7 @@
 <script>
 	export let currentFocusItem;
 	export let image;
-	
+
 	let sideMargin;
 	if (image.width === '20') {
 		sideMargin = 2.5;
@@ -27,7 +27,7 @@
 	* {
 		margin: 0;
 		padding: 0;
-		color: #F4FFF4;
+		color: #f4fff4;
 	}
 
 	p {

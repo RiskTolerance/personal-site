@@ -4,7 +4,7 @@
 		<p>
 			A few years ago I built cookie-cutter site on a whim and found that
 			having a place to post my work and ideas was a great way to stay
-			motivated and look back on what I had accomplished. 
+			motivated and look back on what I had accomplished.
 			<br />
 			<br />
 			But my generic website was also a source of distress. I wanted to have
@@ -43,6 +43,7 @@
 		font-weight: 700;
 		font-size: 4rem;
 		margin-bottom: 2rem;
+		color: #e0a43e;
 	}
 
 	p {

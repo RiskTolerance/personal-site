@@ -19,12 +19,11 @@
 		</div>
 		<nav>
 			{#if y === 0}
-			<Navlist on:navpress {page}/>
-		{:else}
-			<div />
-		{/if}
+				<Navlist on:navpress {page} />
+			{:else}
+				<div />
+			{/if}
 		</nav>
-		
 	</div>
 </div>
 

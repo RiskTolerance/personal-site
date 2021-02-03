@@ -19,8 +19,8 @@ export let photographyProjects = [
         {imageUrl: "11.webp", alt: "", hasDescription: false, description: "", width: "90"},
         {imageUrl: "12.webp", alt: "", hasDescription: false, description: "", width: "90"},
         {imageUrl: "13.webp", alt: "", hasDescription: false, description: "", width: "90"},
-        {imageUrl: "14.webp", alt: "", hasDescription: false, description: "", width: "90"},
-        {imageUrl: "15.webp", alt: "", hasDescription: false, description: "", width: "90"},
+        {imageUrl: "14.webp", alt: "", hasDescription: false, description: "", width: "40"},
+        {imageUrl: "15.webp", alt: "", hasDescription: false, description: "", width: "40"},
         {imageUrl: "16.webp", alt: "", hasDescription: false, description: "", width: "90"}]},
 
     {type: "Photography", 
@@ -31,25 +31,33 @@ export let photographyProjects = [
     tools: "DSLR, Flash & studio, Lightroom, Photoshop",
     images: [
         {imageUrl: "1.webp", alt: "", hasDescription: false, description: "", width: "90"},
-        {imageUrl: "2.webp", alt: "", hasDescription: false, description: "", width: "90"},
-        {imageUrl: "3.webp", alt: "", hasDescription: false, description: "", width: "90"}, 
-        {imageUrl: "4.webp", alt: "", hasDescription: false, description: "", width: "90"},  
-        {imageUrl: "5.webp", alt: "", hasDescription: false, description: "", width: "90"}
+        {imageUrl: "2.webp", alt: "", hasDescription: false, description: "", width: "40"},
+        {imageUrl: "4.webp", alt: "", hasDescription: false, description: "", width: "40"}, 
+        {imageUrl: "3.webp", alt: "", hasDescription: false, description: "", width: "90"},  
+        {imageUrl: "5.webp", alt: "", hasDescription: false, description: "", width: "40"}
 ]},
 
-    {type: "Photography", 
-    title: "Weddings",
-    titleUrl: "Weddings",
-    headerImg: "thumbnail.webp", 
-    description: "",
-    tools: "DSLR, Lightroom, Photoshop",
-    images: ["1.jpg", "2.jpg", "3.jpg"]},
+    // {type: "Photography", 
+    // title: "Weddings",
+    // titleUrl: "Weddings",
+    // headerImg: "thumbnail.webp", 
+    // description: "",
+    // tools: "DSLR, Lightroom, Photoshop",
+    // images: ["1.jpg", "2.jpg", "3.jpg"]},
 
     {type: "Photography", 
     title: "Photo Restoration",
     titleUrl: "PhotoRestoration",
-    headerImg: "header.jpg", 
+    headerImg: "thumbnail.webp", 
     description: "",
     tools: "Photoshop, Various AI softwares",
-    images: ["1.jpg", "2.jpg", "3.jpg"]},
+    images: [
+        {imageUrl: "1.webp", alt: "", hasDescription: false, description: "", width: "40"},
+        {imageUrl: "2.webp", alt: "", hasDescription: false, description: "", width: "40"},
+        {imageUrl: "3.webp", alt: "", hasDescription: false, description: "", width: "90"}, 
+        {imageUrl: "4.webp", alt: "", hasDescription: false, description: "", width: "90"},  
+        {imageUrl: "5.webp", alt: "", hasDescription: false, description: "", width: "90"},
+        {imageUrl: "6.webp", alt: "", hasDescription: false, description: "", width: "40"},
+        {imageUrl: "7.webp", alt: "", hasDescription: false, description: "", width: "40"}
+    ]}
 ];

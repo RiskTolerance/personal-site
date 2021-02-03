@@ -49,7 +49,7 @@
 		font-weight: 900;
 		font-size: 3rem;
 		transform: translateZ(50px);
-		text-shadow: 0px 0px 4px #000000;
+		text-shadow: 0px 0px 6px #000000;
 	}
 
 	.work-block {
