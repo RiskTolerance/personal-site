@@ -5,6 +5,17 @@
 	export let i;
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
+	import { fade } from 'svelte/transition';
+
+	function preload(src) {
+		return new Promise(function (resolve) {
+			let img = new Image();
+			img.onload = resolve;
+			img.src = src;
+		});
+	}
+
+	let src = `/images/projects/${project.type}/${project.titleUrl}/${project.headerImg}`;
 
 	onMount(async () => {
 		VanillaTilt.init(document.querySelectorAll('.work-block'), {
@@ -27,8 +38,18 @@
 	/>
 	<div
 		class="image"
-		style="background-image: url(/images/projects/{project.type}/{project.titleUrl}/{project.headerImg})"
+		style="background-image: url()"
 	/>
+	<div id="image-wrapper" style="background-image: url({project.thumbPlaceholder});">
+		{#await preload(src) then _}
+			<img
+				{src}
+				in:fade={{ duration: 100 }}
+				alt="description"
+				class="image"
+			/>
+		{/await}
+	</div>
 	<p class="project-title">{project.title}</p>
 </div>
 
@@ -66,7 +87,7 @@
 		border: 2.5rem solid #272727;
 	}
 
-	.image {
+	#image-wrapper {
 		position: absolute;
 		bottom: -5%;
 		left: -5%;
@@ -74,6 +95,14 @@
 		height: 110%;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center;
+		transform: translateZ(-70px);
+	}
+
+	.image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 		transform: translateZ(-70px);
 	}
 </style>

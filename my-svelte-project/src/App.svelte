@@ -1,12 +1,4 @@
 <script>
-	//lazy load images
-	import LazyLoad from 'vanilla-lazyload';
-	if (!document.lazyLoadInstance) {
-		document.lazyLoadInstance = new LazyLoad({
-			elements_selector: '.lazy',
-		});
-	}
-
 	//components
 	import Navbar from './components/Navbar.svelte';
 	import PageHeader from './components/PageHeader.svelte';

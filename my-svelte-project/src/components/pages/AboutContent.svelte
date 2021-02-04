@@ -1,19 +1,29 @@
 <script>
-	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
-	onMount(() => {
-		document.lazyLoadInstance.update();
-	});
+	function preload(src) {
+		return new Promise(function (resolve) {
+			let img = new Image();
+			img.onload = resolve;
+			img.src = src;
+		});
+	}
+
+	let src = '/images/portrait.webp';
 </script>
 
-<div id="wrapper">
-	<div id="content">
-		<img
-			class="lazy"
-			id="portrait"
-			data-src="/images/portrait.webp"
-			alt="Portrait of Isaac Druin"
-		/>
+<div id="content-wrapper">
+	<div id="portrait-container">
+		{#await preload(src) then _}
+			<img
+				id="portrait"
+				{src}
+				alt="Portrait of Isaac Druin"
+				in:fade={{ duration: 100 }}
+			/>
+		{/await}
+	</div>
+	<div id="text-container">
 		<p>
 			<strong
 				style="color: #e0a43e; font-family: 'Lato', sans-serif; font-weight: 900; font-size: 2rem;"
@@ -39,32 +49,37 @@
 </div>
 
 <style type="text/css">
-	#wrapper {
+	#content-wrapper {
 		display: flex;
+		flex-direction: row;
 		width: 100%;
 		height: 100%;
-		margin-top: 4rem;
-		margin-bottom: 4rem;
+		margin: 4rem 0 8rem;
 		justify-content: center;
 	}
 
-	#content {
-		display: flex;
-		flex-direction: row;
-		width: 80%;
-		height: 100%;
-		padding-bottom: 4rem;
-		justify-content: space-around;
+	#portrait-container {
+		display: block;
+		height: 400px;
+		width: 285.5px;
+		background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTQyIDE2MDAiPjxmaWx0ZXIgaWQ9ImIiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEyIiAvPjwvZmlsdGVyPjxwYXRoIGZpbGw9IiMzOTM5MzkiIGQ9Ik0wIDBoMTE0M3YxNjAwSDB6Ii8+PGcgZmlsdGVyPSJ1cmwoI2IpIiB0cmFuc2Zvcm09Im1hdHJpeCg2LjI1IDAgMCA2LjI1IDMuMSAzLjEpIiBmaWxsLW9wYWNpdHk9Ii41Ij48ZWxsaXBzZSBmaWxsPSIjZTllOGU5IiByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0icm90YXRlKDE2Ni45IDM5LjcgNTYuNCkgc2NhbGUoMjcuMTY5MTUgOTEuNDA4MTgpIi8+PGVsbGlwc2UgZmlsbD0iI2ZmZiIgcng9IjEiIHJ5PSIxIiB0cmFuc2Zvcm09Im1hdHJpeCgzNS4yMDc4NCA2MS4yMjgzIC0yNC4wNTE0MyAxMy44MzAxOSAxNjEuMSAxOTMuMykiLz48ZWxsaXBzZSBjeD0iMzciIGN5PSIxOTMiIHJ4PSI1NyIgcnk9IjExNyIvPjxlbGxpcHNlIGN4PSIxNzEiIGN5PSI4MSIgcng9IjYyIiByeT0iNjIiLz48ZWxsaXBzZSBjeD0iNSIgY3k9IjQ2IiByeD0iNTciIHJ5PSI1NyIvPjxlbGxpcHNlIGZpbGw9IiNiYWJhYmEiIHJ4PSIxIiByeT0iMSIgdHJhbnNmb3JtPSJtYXRyaXgoLTMxLjA1MTM1IC4zNTMyNSAtLjYzMzQ2IC01NS42ODIxIDg0LjUgNzAuOCkiLz48ZWxsaXBzZSByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0ibWF0cml4KDE4Ljk2ODUzIDkuMjQyMjMgLTI4LjE4ODgyIDU3Ljg1NDA1IDEwNi4yIDIyMy4xKSIvPjxlbGxpcHNlIGN4PSIxNDIiIGN5PSIyMSIgcng9IjQwIiByeT0iNDAiLz48L2c+PC9zdmc+');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
 
 	#portrait {
 		display: block;
 		height: 400px;
-		margin-right: 60px;
+		width: 285.5px;
+	}
+
+	#text-container {
+		width: 50%;
+		margin-left: 8rem;
 	}
 
 	p {
-		width: 50%;
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
 		font-size: 2rem;

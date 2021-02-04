@@ -66,7 +66,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		margin: 40px 0;
+		margin: 4rem 0;
 		width: 90%;
 	}
 
@@ -75,12 +75,12 @@
 		flex-direction: column;
 		justify-content: center;
 		max-width: 1080px;
-		margin-bottom: 8rem;
+		margin-bottom: 4rem;
 	}
 
 	#section {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		max-width: 1110px;
 	}

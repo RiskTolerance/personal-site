@@ -3,7 +3,7 @@
 	import { posts } from '../../data/BlogPosts.js';
 </script>
 
-<div id="blog-block-wrapper">
+<div id="content-wrapper">
 	<div id="section-description">
 		<p>
 			There’s something motivational about keeping a public-facing blog.
@@ -12,32 +12,35 @@
 			Covid.
 		</p>
 	</div>
-	{#each posts as post, i}
-		<BlogBlock
-			on:blogItemPress
-			{post}
-			{i}
-		/>
-	{/each}
+	<div id="section">
+		{#each posts as post, i}
+			<BlogBlock on:blogItemPress {post} {i} />
+		{/each}
+	</div>
 </div>
 
 <style>
-	#blog-block-wrapper {
+	#content-wrapper {
 		display: flex;
-		justify-content: flex-start;
-		margin-left: 5%;
-		margin-bottom: 4rem;
+		align-items: center;
+		flex-direction: column;
+		margin: 40px 0;
 		width: 90%;
-		height: 90%;
-		flex-wrap: wrap;
 	}
 
 	#section-description {
-		margin: 4rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		width: 90%;
+		max-width: 1100px;
+		margin-bottom: 4rem;
+	}
+
+	#section {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		max-width: 1100px;
 	}
 
 	p {

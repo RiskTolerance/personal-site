@@ -4,7 +4,7 @@
 	export let post;
 	export let i;
 	import { createEventDispatcher } from 'svelte';
-	import { fade } from 'svelte/transition'
+	import { fade } from 'svelte/transition';
 	const dispatch = createEventDispatcher();
 
 	function preload(src) {
@@ -15,7 +15,7 @@
 		});
 	}
 
-	let src = `/images/blogs/${post.titleUrl}/${post.thumbnail}`
+	let src = `/images/blogs/${post.titleUrl}/${post.thumbnail}`;
 
 	onMount(async () => {
 		VanillaTilt.init(document.querySelectorAll('.blog-block'), {
@@ -29,20 +29,16 @@
 </script>
 
 <div class="blog-block">
-	<img
-		class="image"
-		alt="placeholder"
-		style="background-image: url({post.thumbPlaceholder});"
-	/>
-
-	{#await preload(src) then _}
-	<img
-		{src}
-		in:fade="{{ duration: 500 }}"
-		alt="description"
-		class="image"
-	/>
-	{/await}
+	<div id="image-wrapper" style="background-image: url({post.thumbPlaceholder});">
+		{#await preload(src) then _}
+			<img
+				{src}
+				in:fade={{ duration: 100 }}
+				alt="description"
+				class="image"
+			/>
+		{/await}
+	</div>
 
 	<div
 		id="click"
@@ -52,7 +48,7 @@
 			})}
 	/>
 
-	<div class="info-container-color"/>
+	<div class="info-container-color" />
 	<div class="info-container">
 		<h4 id="title">{post.title}</h4>
 		<div id="date-container">
@@ -88,7 +84,7 @@
 		border: 40px solid #272727;
 	}
 
-	.image {
+	#image-wrapper {
 		position: absolute;
 		bottom: -10%;
 		left: -8%;
@@ -97,6 +93,13 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+		transform: translateZ(-120px);
+	}
+
+	.image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 		transform: translateZ(-120px);
 	}
 

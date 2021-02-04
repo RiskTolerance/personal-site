@@ -2,7 +2,8 @@ export let photographyProjects = [
     {type: "Photography", 
     title: "Favorites",
     titleUrl: "Favorites",
-    headerImg: "thumbnail.webp", 
+    headerImg: "thumbnail.webp",
+    thumbPlaceholder: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj48ZmlsdGVyIGlkPSJiIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz48L2ZpbHRlcj48cGF0aCBmaWxsPSIjNjU2MDU4IiBkPSJNMCAwaDUwMHY1MDBIMHoiLz48ZyBmaWx0ZXI9InVybCgjYikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkgc2NhbGUoMS45NTMxMykiIGZpbGwtb3BhY2l0eT0iLjUiPjxlbGxpcHNlIGZpbGw9IiNlNWQ3ZGIiIGN4PSI0NSIgY3k9IjE0OSIgcng9IjcwIiByeT0iMzciLz48ZWxsaXBzZSBmaWxsPSIjZGZmZmJmIiByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0ibWF0cml4KDcuOTkwMTIgLTE2Ljc5NDkgNTEuNzc2NTkgMjQuNjMyNTUgMTgzLjcgMTI4LjkpIi8+PGVsbGlwc2UgZmlsbD0iIzAwMDEwMSIgcng9IjEiIHJ5PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg4NC42IC02OS4yIDE1OSkgc2NhbGUoMjguMzU4NTYgMTEyLjk1MTQ1KSIvPjxlbGxpcHNlIGN4PSIyMzgiIGN5PSI2MiIgcng9Ijc3IiByeT0iMTgiLz48ZWxsaXBzZSBmaWxsPSIjMzkyNzJmIiBjeD0iMjUiIGN5PSI1MSIgcng9IjQ5IiByeT0iNDkiLz48cGF0aCBmaWxsPSIjZDNmNGIwIiBkPSJNMTczIDg3aDM5djU1aC0zOXoiLz48ZWxsaXBzZSBmaWxsPSIjYTc4OThkIiBjeD0iOTAiIGN5PSI3MSIgcng9IjMyIiByeT0iMzIiLz48ZWxsaXBzZSBmaWxsPSIjYzFhM2E4IiByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0ibWF0cml4KDE3LjI3NDQxIDkuMzc5ODMgLTExLjc4NzQgMjEuNzA4MzQgMjM1LjMgMTk0LjIpIi8+PC9nPjwvc3ZnPg==",
     description: "",
     tools: "DSLR, Lightroom, Photoshop",
     images: [
@@ -26,14 +27,15 @@ export let photographyProjects = [
     {type: "Photography", 
     title: "Product",
     titleUrl: "Product",
-    headerImg: "thumbnail.webp", 
+    headerImg: "thumbnail.webp",
+    thumbPlaceholder: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj48ZmlsdGVyIGlkPSJiIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIgLz48L2ZpbHRlcj48cGF0aCBmaWxsPSIjYjBkN2U0IiBkPSJNMCAwaDUwMHY1MDBIMHoiLz48ZyBmaWx0ZXI9InVybCgjYikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkgc2NhbGUoMS45NTMxMykiIGZpbGwtb3BhY2l0eT0iLjUiPjxlbGxpcHNlIGZpbGw9IiMwMDRlODUiIHJ4PSIxIiByeT0iMSIgdHJhbnNmb3JtPSJtYXRyaXgoLTE0LjE2NTI1IDM1LjI4OTYzIC02Ny45Nzc4MSAtMjcuMjg2MjggODMgMjQyLjcpIi8+PGVsbGlwc2UgZmlsbD0iIzAwOTVjZSIgcng9IjEiIHJ5PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg2LjYgLTgxOC40IDkxNSkgc2NhbGUoNTguMTI4NDIgMjguMzgyMDcpIi8+PGVsbGlwc2UgZmlsbD0iI2ZmZiIgcng9IjEiIHJ5PSIxIiB0cmFuc2Zvcm09Im1hdHJpeCgtMTguOTUwNDMgLTM4LjEyNTI4IDE3NS45OTc3NCAtODcuNDgwOSA2Ni4xIDI5LjgpIi8+PGVsbGlwc2Ugcng9IjEiIHJ5PSIxIiB0cmFuc2Zvcm09Im1hdHJpeCgxMC43ODgwMSAtMjUuMDcwMSAxMi41MTA2MiA1LjM4MzUgMTUxLjEgNTEuMikiLz48ZWxsaXBzZSBmaWxsPSIjZmZmIiBjeD0iMjM0IiBjeT0iODAiIHJ4PSI4MSIgcnk9IjgxIi8+PGVsbGlwc2UgZmlsbD0iIzAwNWU4MiIgY3g9Ijg5IiBjeT0iMjQ5IiByeD0iNTMiIHJ5PSIzMCIvPjxwYXRoIGZpbGw9IiMwMDc2YWYiIGQ9Ik0xNjIuNSAxNjMuNWwxNC40IDE0LTQ5LjQgNTEtMTQuNC0xNHoiLz48ZWxsaXBzZSBmaWxsPSIjMDA5MmJiIiByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0ibWF0cml4KC0zMC4zOTkzMiAtNS40MTQ5NCA0LjI2MzEyIC0yMy45MzMgMjA0IDI1NSkiLz48L2c+PC9zdmc+", 
     description: "This was a personal project to practice product photography utilizing glass objects as the primary subjects. The LIT watermark was a logo that I was working on to represent myself and two other photographers who I work with.",
     tools: "DSLR, Flash & studio, Lightroom, Photoshop",
     images: [
         {imageUrl: "1.webp", alt: "", hasDescription: false, description: "", width: "90"},
         {imageUrl: "2.webp", alt: "", hasDescription: false, description: "", width: "40"},
-        {imageUrl: "4.webp", alt: "", hasDescription: false, description: "", width: "40"}, 
-        {imageUrl: "3.webp", alt: "", hasDescription: false, description: "", width: "90"},  
+        {imageUrl: "4.webp", alt: "", hasDescription: false, description: "", width: "40"},
+        {imageUrl: "3.webp", alt: "", hasDescription: false, description: "", width: "90"},
         {imageUrl: "5.webp", alt: "", hasDescription: false, description: "", width: "40"}
 ]},
 
@@ -48,7 +50,8 @@ export let photographyProjects = [
     {type: "Photography", 
     title: "Photo Restoration",
     titleUrl: "PhotoRestoration",
-    headerImg: "thumbnail.webp", 
+    headerImg: "thumbnail.webp",
+    thumbPlaceholder: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIwIDE5MjAiPjxmaWx0ZXIgaWQ9ImIiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEyIiAvPjwvZmlsdGVyPjxwYXRoIGZpbGw9IiM4Yjc4NzUiIGQ9Ik0wIDBoMTkyMHYxOTIwSDB6Ii8+PGcgZmlsdGVyPSJ1cmwoI2IpIiB0cmFuc2Zvcm09Im1hdHJpeCg3LjUgMCAwIDcuNSAzLjggMy44KSIgZmlsbC1vcGFjaXR5PSIuNSI+PGVsbGlwc2Ugcng9IjEiIHJ5PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg3OC40IDE0LjYgMTk2LjkpIHNjYWxlKDU1LjEwMjA3IDE5LjMyMTk0KSIvPjxlbGxpcHNlIGN4PSIxNDYiIGN5PSI4MCIgcng9IjQxIiByeT0iMjEiLz48ZWxsaXBzZSByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0icm90YXRlKDE0Mi4yIDE5IDExMS41KSBzY2FsZSgzNy4yNDg4NCAyNi4wMzU2NSkiLz48ZWxsaXBzZSBmaWxsPSIjY2RkNGQwIiByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0icm90YXRlKC02Mi4xIDEwMy43IC0xNDEuOSkgc2NhbGUoNTEuNjI4NTUgMjE4Ljk2NzI3KSIvPjxlbGxpcHNlIHJ4PSIxIiByeT0iMSIgdHJhbnNmb3JtPSJyb3RhdGUoMTYuMiAtMTA4LjIgMjk3LjcpIHNjYWxlKDQ2LjUzNjkgMTQuMjY3NDUpIi8+PHBhdGggZmlsbD0iI2RlZTVlNiIgZD0iTTIyLTUxLjJMNjkuNi0yNiAyIDEwMS4yLTQ1LjYgNzZ6Ii8+PGVsbGlwc2UgZmlsbD0iIzAwMDAwMyIgY3g9IjIzOSIgY3k9IjI0MyIgcng9IjUyIiByeT0iMTkiLz48cGF0aCBmaWxsPSIjMzcyMzJjIiBkPSJNMzguOCAxMzguOEw2MSAyNTMuNiAxLjIgMjY1LjItMjEgMTUwLjR6Ii8+PC9nPjwvc3ZnPg==",
     description: "",
     tools: "Photoshop, Various AI softwares",
     images: [

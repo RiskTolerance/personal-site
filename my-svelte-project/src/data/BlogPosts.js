@@ -10,7 +10,7 @@ export let posts = [
         { id: "1", 
         title: "Svelte: First Impressions", 
         titleUrl:"SvelteFirstImpressions",
-        thumbnail: "thumbnail.jpg", 
+        thumbnail: "thumbnail.webp", 
         date: "1/19/21",
         thumbPlaceholder: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzk2IDg2NCI+PGZpbHRlciBpZD0iYiI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMTIiIC8+PC9maWx0ZXI+PHBhdGggZmlsbD0iI2ZiZjhmNyIgZD0iTTAgMGgxMzk2djg2MUgweiIvPjxnIGZpbHRlcj0idXJsKCNiKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi43IDIuNykgc2NhbGUoNS40NTMxMykiIGZpbGwtb3BhY2l0eT0iLjUiPjxlbGxpcHNlIGZpbGw9IiNmZjIwMDAiIHJ4PSIxIiByeT0iMSIgdHJhbnNmb3JtPSJyb3RhdGUoMjguMSAtMTI2LjQgMTU5KSBzY2FsZSgxNS4yNjk4MSAyMS4yNDc0NSkiLz48ZWxsaXBzZSBmaWxsPSIjYjdiM2IyIiByeD0iMSIgcnk9IjEiIHRyYW5zZm9ybT0ibWF0cml4KC0uNTUwNjkgLTEzLjU4MzA1IDgxLjcyODY2IC0zLjMxMzQ3IDEzNi41IDc4KSIvPjxwYXRoIGZpbGw9IiM1ZTY1NmMiIGQ9Ik05OSA2NGwtOC42IDcuMyAzIDYuMyAxMS45IDcuNXoiLz48ZWxsaXBzZSBmaWxsPSIjNWM2MDZhIiBjeD0iMTcyIiBjeT0iODciIHJ4PSI0NCIgcnk9IjIiLz48cGF0aCBmaWxsPSIjZmYxZDAwIiBkPSJNNjcgNzFsOSAxNS0xLTIyeiIvPjxlbGxpcHNlIGZpbGw9IiMyYjMwM2MiIHJ4PSIxIiByeT0iMSIgdHJhbnNmb3JtPSJtYXRyaXgoLS4xMTc3OSAtMTIuMTExMjQgMi4xMzQzNCAtLjAyMDc2IDE5OC42IDc3LjIpIi8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0Ny0zbDM5IDEwM0w1Ny0xNnoiLz48cGF0aCBmaWxsPSIjZmY1MTA3IiBkPSJNNTUgOTlsLTE0LTkgNC0yM3oiLz48L2c+PC9zdmc+" 
         },
@@ -18,7 +18,7 @@ export let posts = [
         { id: "2", 
         title: "Reworking Old Projects",
         titleUrl:"ReworkingOldProjects",
-        thumbnail: "thumbnail.jpg",
+        thumbnail: "thumbnail.webp",
         date: "1/21/21",
         thumbPlaceholder: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDg1MyI+PGZpbHRlciBpZD0iYiI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMTIiIC8+PC9maWx0ZXI+PHBhdGggZmlsbD0iIzg2OGU4NiIgZD0iTTAgMGgxMjgwdjg1MEgweiIvPjxnIGZpbHRlcj0idXJsKCNiKSIgdHJhbnNmb3JtPSJtYXRyaXgoNSAwIDAgNSAyLjUgMi41KSIgZmlsbC1vcGFjaXR5PSIuNSI+PGVsbGlwc2UgZmlsbD0iI2ZmZiIgY3g9IjgyIiBjeT0iMjciIHJ4PSI3MyIgcnk9IjczIi8+PGVsbGlwc2UgZmlsbD0iIzE3MjIxOSIgY3g9IjIyNiIgY3k9IjEzNSIgcng9IjEwNiIgcnk9IjU3Ii8+PGVsbGlwc2UgY3g9IjUwIiBjeT0iMTQ4IiByeD0iMzgiIHJ5PSIzOCIvPjxlbGxpcHNlIGZpbGw9IiM4MjcyMDAiIHJ4PSIxIiByeT0iMSIgdHJhbnNmb3JtPSJyb3RhdGUoMTMxLjMgNDguMiA2OC40KSBzY2FsZSgyMC4wMzQ3MiAyNy4zNTMwNCkiLz48ZWxsaXBzZSBmaWxsPSIjYjFjMmQ1IiBjeD0iMjI1IiBjeT0iMzEiIHJ4PSI0OSIgcnk9IjQ5Ii8+PGVsbGlwc2UgZmlsbD0iIzdlOGM5YyIgcng9IjEiIHJ5PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSgtMzMuOCAzMTcgLTE2OCkgc2NhbGUoNDQuMjEzNjggMzMuNzUwOTcpIi8+PGVsbGlwc2UgZmlsbD0iIzAwMDIwOSIgY3g9IjIzNSIgY3k9IjE1NiIgcng9IjI4IiByeT0iMjYiLz48ZWxsaXBzZSBmaWxsPSIjMTAwZjAwIiBjeD0iNTAiIGN5PSIxNTAiIHJ4PSIzMCIgcnk9IjMwIi8+PC9nPjwvc3ZnPg=="
         },

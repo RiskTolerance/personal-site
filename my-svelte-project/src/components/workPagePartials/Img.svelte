@@ -1,6 +1,17 @@
 <script>
 	export let currentFocusItem;
 	export let image;
+	import { fade } from 'svelte/transition';
+
+	function preload(src) {
+		return new Promise(function (resolve) {
+			let img = new Image();
+			img.onload = resolve;
+			img.src = src;
+		});
+	}
+
+	let src = `./images/projects/${currentFocusItem.type}/${currentFocusItem.titleUrl}/${image.imageUrl}`;
 
 	let sideMargin;
 	if (image.width === '20') {
@@ -16,12 +27,16 @@
 	<p>{image.description}</p>
 {/if}
 
-<img
-	id="image"
-	style="width: {image.width}%; margin: 0 {sideMargin}% 40px {sideMargin}%;"
-	src="./images/projects/{currentFocusItem.type}/{currentFocusItem.titleUrl}/{image.imageUrl}"
-	alt={image.alt}
-/>
+<div id="image-wrapper" style="width: {image.width}%; margin: 0 {sideMargin}% 40px {sideMargin}%;">
+	{#await preload(src) then _}
+		<img
+			id="image"
+			{src}
+			in:fade={{ duration: 100 }}
+			alt={image.alt}
+		/>
+	{/await}
+</div>
 
 <style>
 	* {
@@ -38,7 +53,12 @@
 		font-size: 2rem;
 	}
 
-	img {
+	#image-wrapper {
 		margin-bottom: 40px;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
 	}
 </style>
