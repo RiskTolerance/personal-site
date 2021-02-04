@@ -4,7 +4,18 @@
 	export let post;
 	export let i;
 	import { createEventDispatcher } from 'svelte';
+	import { fade } from 'svelte/transition'
 	const dispatch = createEventDispatcher();
+
+	function preload(src) {
+		return new Promise(function (resolve) {
+			let img = new Image();
+			img.onload = resolve;
+			img.src = src;
+		});
+	}
+
+	let src = `/images/blogs/${post.titleUrl}/${post.thumbnail}`
 
 	onMount(async () => {
 		VanillaTilt.init(document.querySelectorAll('.blog-block'), {
@@ -18,17 +29,30 @@
 </script>
 
 <div class="blog-block">
-	<div
+	<img
 		class="image"
-		style="background-image: url(/images/blogs/{post.titleUrl}/{post.thumbnail});"
+		alt="placeholder"
+		style="background-image: url({post.thumbPlaceholder});"
 	/>
+
+	{#await preload(src) then _}
+	<img
+		{src}
+		in:fade="{{ duration: 500 }}"
+		alt="description"
+		class="image"
+	/>
+	{/await}
+
 	<div
 		id="click"
-		on:click={() => dispatch('blogItemPress', {
-			text: i
-		})}
+		on:click={() =>
+			dispatch('blogItemPress', {
+				text: i,
+			})}
 	/>
-	<div class="info-container-color" />
+
+	<div class="info-container-color"/>
 	<div class="info-container">
 		<h4 id="title">{post.title}</h4>
 		<div id="date-container">
@@ -115,7 +139,7 @@
 
 	#line {
 		height: 5px;
-		margin-top:2.5px;
+		margin-top: 2.5px;
 		width: 70%;
 		background-color: #272727;
 	}
