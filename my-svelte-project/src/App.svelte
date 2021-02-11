@@ -5,6 +5,7 @@
 	import Background from './components/Background.svelte';
 	import Content from './components/Content.svelte';
 	import Footer from './components/Footer.svelte';
+	import MobileNavbar from './components/MobileNavbar.svelte'
 
 	// data
 	import { graphicDesignProjects } from './data/GraphicDesignWork.js';
@@ -18,14 +19,15 @@
 	let subPage = 'Graphic Design';
 	let currentFocusItem = '';
 	let leftHeaderMargin = '100px';
-	// clip ratio default: 40
 	$: clipRatio = 40;
 	let m = { x: 0, y: 0 };
 	let y;
+	let innerWidth;
+	let layout;
+	$: innerWidth >= 1390 ? (layout = 'desktop') : (layout = 'mobile');
 
 	//functions
 	let handleNavigation = (event) => {
-		//clip ratio default: 25
 		clipRatio = 15;
 		currentFocusItem = '';
 		page = event.detail.text;
@@ -60,7 +62,8 @@
 	};
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth />
+<!-- <MobileNavbar /> -->
 
 <Navbar
 	on:navpress={handleNavigation}
@@ -72,16 +75,20 @@
 	}}
 	{y}
 	{page}
+	{layout}
 />
 
 <main on:mousemove={handleMouseMove}>
-	<Background {clipRatio} />
+	{#if layout === 'desktop'}
+		<Background {clipRatio} {layout} />
+	{/if}
 	<PageHeader
 		{title}
 		{leftHeaderMargin}
 		{page}
 		{subPage}
 		{currentFocusItem}
+		{layout}
 		on:workNavPress={handleWorkNavigation}
 		on:closeItem={closeItem}
 	/>
@@ -92,6 +99,7 @@
 		{subPage}
 		{currentFocusItem}
 		{clipRatio}
+		{layout}
 	/>
 	<Footer {page} />
 </main>
@@ -107,10 +115,6 @@
 
 <style>
 	:global(body) {
-		margin: 0px;
-		padding: 0px;
-		width: 100%;
-		height: 100%;
 		background-color: #272727;
 	}
 
@@ -118,6 +122,26 @@
 		width: 92vw;
 		margin: 0 4vw 0;
 		flex-direction: column;
-		height: 100%;
 	}
+
+	/* #mobile-styling-info {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#mobile-styling-info h1 {
+		font-family: lato, sans-serif;
+		font-size: 6rem;
+		font-weight: 900;
+		color: teal;
+		-webkit-text-stroke-width: 3px;
+		-webkit-text-stroke-color: black;
+	} */
 </style>

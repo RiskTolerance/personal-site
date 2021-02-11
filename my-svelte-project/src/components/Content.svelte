@@ -10,10 +10,11 @@
 	export let subPage;
 	export let clipRatio;
 	export let currentFocusItem;
+	export let layout;
 </script>
 
 <div id="outer-content-wrapper">
-	<div style="margin-left: {clipRatio + 5}%" id="inner-content-wrapper">
+	<div class:clear-margin="{layout === 'mobile'}" style="margin-left: {clipRatio}%" id="inner-content-wrapper">
 		{#if page === 'Welcome'}
 			<WelcomeContent />
 		{:else if page === 'About'}
@@ -42,19 +43,20 @@
 </div>
 
 <style>
+	.clear-margin {
+		margin-left: 0 !important;
+	}
+
 	#outer-content-wrapper {
 		display: flex;
 		min-height: 60vh;
 		width: 100%;
-		justify-self: center;
-		justify-content: center;
-		align-items: center;
 	}
-
+	
 	#inner-content-wrapper {
 		display: flex;
 		flex-direction: column;
-		margin-top: 5vh;
+		margin-top: 2rem;
 		width: 100%;
 		height: 100%;
 		justify-content: center;

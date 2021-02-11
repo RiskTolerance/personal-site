@@ -30,7 +30,7 @@
 
 	#footer-wrapper {
 		display: flex;
-		height: 10vh;
+		height: 12vh;
 		width: 100%;
 		justify-content: flex-end;
 	}
@@ -38,14 +38,12 @@
 	#content {
 		width: 200px;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		justify-content: flex-end;
 	}
 
 	#social-links {
 		width: 200px;
-		margin-bottom: 40px;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -53,7 +51,8 @@
 
 	#social-arrow {
 		position: relative;
-		left: -120px;
-		top: -10px;
+		display: block;
+		left: 105px;
+		top: -7vh;
 	}
 </style>

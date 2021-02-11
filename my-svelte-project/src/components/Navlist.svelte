@@ -3,6 +3,7 @@
 	import { fly } from 'svelte/transition';
 	const dispatch = createEventDispatcher();
 	export let page;
+
 	let aboutColor,
 		workColor,
 		blogColor,
@@ -32,43 +33,77 @@
 	}
 </script>
 
-<ul in:fly={{ y: -50, duration: 500 }} out:fly={{ y: -50, duration: 500 }}>
-	<li style="color: {aboutColor}" on:click={() => dispatch('navpress', {
-		text: 'About'
-	})}>
-		About
-	</li>
-	<li style="color: {workColor}" on:click={() => dispatch('navpress', {
-		text: 'Work'
-	})}>
-		Work
-	</li>
-	<li style="color: {blogColor}" on:click={() => dispatch('navpress', {
-		text: 'Blog'
-	})}>
-		Blog
-	</li>
-	<li style="color: {contactColor}" on:click={() => dispatch('navpress', {
-		text: 'Contact'
-	})}>
-		Contact
-	</li>
-</ul>
+<nav id="desktop-nav">
+	<ul
+		in:fly={{ y: -50, duration: 500 }}
+		out:fly={{ y: -50, duration: 500 }}
+		on:introstart={() => dispatch('transitionStart')}
+		on:introend={() => dispatch('transitionEnd')}
+		on:outrostart={() => dispatch('transitionStart')}
+		on:outroend={() => dispatch('transitionEnd')}
+	>
+		<li
+			style="color: {aboutColor}"
+			on:click={() =>
+				dispatch('navpress', {
+					text: 'About',
+				})}
+		>
+			About
+		</li>
+		<li
+			style="color: {workColor}"
+			on:click={() =>
+				dispatch('navpress', {
+					text: 'Work',
+				})}
+		>
+			Work
+		</li>
+		<li
+			style="color: {blogColor}"
+			on:click={() =>
+				dispatch('navpress', {
+					text: 'Blog',
+				})}
+		>
+			Blog
+		</li>
+		<li
+			style="color: {contactColor}"
+			on:click={() =>
+				dispatch('navpress', {
+					text: 'Contact',
+				})}
+		>
+			Contact
+		</li>
+	</ul>
+</nav>
 
 <style>
 	* {
 		display: flex;
 	}
 
-	ul {
+	#desktop-nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+		justify-content: flex-end;
+		align-items: center;
+		width: 500px;
 		height: 100%;
+	}
+
+	ul {
 		width: 100%;
+		height: 50%;
 		justify-content: space-between;
 		list-style: none;
 	}
 
 	li {
-		height: 40%;
 		align-self: center;
 		font-family: 'Lato', sans-serif;
 		font-weight: 700;

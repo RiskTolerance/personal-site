@@ -1,40 +1,59 @@
 <script>
 	import Navlist from './Navlist.svelte';
+	import MobileMenuIcon from './icons/MobileMenuIcon.svelte';
+	import Logo from './icons/Logo.svelte';
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 	export let page;
 	export let y;
+	export let layout;
+
+	let mobileTransition = false;
+	let desktopTransition = false;
 </script>
 
 <div id="outer-wrapper">
 	<div id="inner-wrapper">
 		<div id="logo">
-			<img
-				on:click={() => dispatch('homepress')}
-				src="./images/Logo.svg"
-				alt="logo"
-				width="80"
-				height="80"
-			/>
+			<Logo on:homepress />
 		</div>
-		<nav>
-			{#if y === 0}
-				<Navlist on:navpress {page} />
-			{:else}
-				<div />
+		<div id="nav-container">
+			{#if layout === 'desktop' && mobileTransition === false}
+				{#if y === 0}
+					<Navlist
+						on:navpress
+						on:transitionStart={() => {
+							desktopTransition = true;
+						}}
+						on:transitionEnd={() => {
+							desktopTransition = false;
+						}}
+						{page}
+					/>
+				{:else}
+					<div />
+				{/if}
+			{:else if layout === 'mobile' && desktopTransition === false}
+				{#if y === 0}
+					<MobileMenuIcon
+						on:transitionStart={() => {
+							mobileTransition = true;
+						}}
+						on:transitionEnd={() => {
+							mobileTransition = false;
+						}}
+					/>
+				{:else}
+					<div />
+				{/if}
 			{/if}
-		</nav>
+		</div>
 	</div>
 </div>
 
 <style>
 	* {
 		display: flex;
-	}
-
-	nav {
-		width: 33%;
-		align-items: center;
 	}
 
 	#outer-wrapper {
@@ -44,7 +63,6 @@
 		top: 0px;
 		left: 0px;
 		align-content: center;
-		justify-self: center;
 		margin-top: 4rem;
 		margin-left: 4vw;
 	}
@@ -56,13 +74,7 @@
 		align-content: center;
 	}
 
-	#logo img {
-		width: 80px;
-		height: 80px;
-		z-index: 20;
-	}
-
-	#logo img:hover {
-		cursor: pointer;
+	#nav-container {
+		width: 90%;
 	}
 </style>

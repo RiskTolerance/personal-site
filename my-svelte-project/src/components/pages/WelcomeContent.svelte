@@ -23,6 +23,10 @@
 </div>
 
 <style>
+	* {
+		margin: 0;
+	}
+	
 	#wrapper {
 		display: flex;
 		width: 100%;

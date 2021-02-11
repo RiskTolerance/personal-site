@@ -8,12 +8,28 @@ body {
 	scrollbar-width: none;
 }
 
-::-webkit-scrollbar {
-	display: none;
+body {
+	margin: 0;
+	position: absolute;
+	top: 0;
 }
 
-@-moz-document url-prefix() {
-	img:-moz-loading {
-		visibility: hidden;
+@media only screen and (max-width: 1390px) {
+	*,
+	html,
+	body {
+		font-size: 9px;
 	}
+}
+
+@media only screen and (max-width: 600px) {
+	*,
+	html,
+	body {
+		font-size: 8px;
+	}
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
